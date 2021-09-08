@@ -10,7 +10,11 @@ I wanted to investigate how well it meets these three criteria, and whether we c
 
 # Individual stats
 
-**For individual stats, Goblin's caterpillar method produces a similar distribution of stats to 4d6-drop-lowest.** The average ability score is 12. The following chart shows the distribution of stats generated from caterpillar and 4d6-drop-lowest, run over 10,000 characters (and hence producing 60,000 stats). ^^Insert chart^^.
+For individual stats, Goblin's caterpillar method produces a similar distribution of stats to 4d6-drop-lowest.
+
+The average ability score is 12. The following chart shows the distribution of stats generated from caterpillar and 4d6-drop-lowest, run over 10,000 characters (and hence producing 60,000 stats). 
+
+[comment]: <> (Insert chart).
 
 Overall means that the probability of a character having a certain stat is roughly the same whether you use caterpillar or 4d6-drop-lowest - when looking at a single stat from either method. This is good, as in general we don't want to be using a stat generation method if it produces much higher or lower stats.
 
