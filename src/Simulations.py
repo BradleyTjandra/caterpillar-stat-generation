@@ -1,9 +1,8 @@
 from importlib import reload
-from myst_nb import glue
 
 import matplotlib.pyplot as plt
-import pandas as pd
 import matplotlib.ticker as mtick
+import pandas as pd
 
 import CorrelationAnalysis
 import StatArrays

@@ -40,7 +40,7 @@ class ReportTables:
     self.totals = totals
 
   # Analysis of stats
-  def show_stats_distribution(self):
+  def show_point_buy_distribution(self):
 
     fig, axes = plt.subplots()
     line_plot = lambda ax, df, c: ax.plot(df.index, df[c], label=c)
@@ -50,6 +50,24 @@ class ReportTables:
     axes.set_ylabel(f"Distribution (out of {self.num_iterations:,} samples)")
     axes.yaxis.set_major_formatter(mtick.PercentFormatter(xmax=1, decimals=1))
     axes.set_xlabel("Point buy budget")
+    axes.legend()
+    axes.grid(True)
+
+    fig.tight_layout()
+    plt.show()
+
+    # Analysis of stats
+  def show_stats_distribution(self):
+
+    fig, axes = plt.subplots()
+    line_plot = lambda ax, df, c: ax.plot(df.index, df[c], label=c)
+
+    stat_counts = PandasHelper.create_counts(self.stats, normalize=True)
+    [line_plot(axes, stat_counts, c) for c in stat_counts.columns]
+    num_samples = StatArrays.num_ability_scores*self.num_iterations
+    axes.set_ylabel(f"Distribution (out of {num_samples:,} samples)")
+    axes.set_xlabel("Ability score")
+    axes.yaxis.set_major_formatter(mtick.PercentFormatter(xmax=1, decimals=1))
     axes.legend()
     axes.grid(True)
 
@@ -104,22 +122,6 @@ class ReportTables:
   # fig, axes = plt.subplots(ncols=2)
   # fig.set_figwidth(10)
   # line_plot = lambda ax, df, c: ax.plot(df.index, df[c], label=c)
-
-  # point_buy_counts = PandasHelper.create_counts(point_buy, normalize=True)
-  # [line_plot(axes[0], point_buy_counts, c) for c in point_buy_counts.columns]
-  # axes[0].set_ylabel(f"Distribution (out of {num_iterations:,} samples)")
-  # axes[0].yaxis.set_major_formatter(mtick.PercentFormatter(xmax=1, decimals=1))
-  # axes[0].set_xlabel("Point buy budget")
-  # axes[0].legend()
-  # axes[0].grid(True)
-
-  # stat_counts = PandasHelper.create_counts(stats_pd, normalize=True)
-  # [line_plot(axes[1], stat_counts, c) for c in stat_counts.columns]
-  # axes[1].set_ylabel(f"Distribution (out of {StatArrays.num_ability_scores*num_iterations:,} samples)")
-  # axes[1].set_xlabel("Ability score")
-  # axes[1].yaxis.set_major_formatter(mtick.PercentFormatter(xmax=1, decimals=1))
-  # axes[1].legend()
-  # axes[1].grid(True)
 
   # fig.tight_layout()
   # plt.show()
