@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>More details &#8212; My sample book</title>
+    <title>Outline &#8212; My sample book</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -90,10 +90,27 @@
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
-   More details
+   Outline
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="context.html">
+     Context
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="individual-stats.html">
+     Individual Stats
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -177,39 +194,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   More details
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#context">
-   Context
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#individual-stats">
-   Individual stats
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#stat-arrays">
-   Stat arrays
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#improving-the-method">
-   Improving the method
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -218,70 +202,8 @@
         
               <div>
                 
-  <div class="section" id="more-details">
-<h1>More details<a class="headerlink" href="#more-details" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="context">
-<h1>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h1>
-<p>Recently Goblin’s Henchman shared an <a class="reference external" href="https://goblinshenchman.wordpress.com/2020/08/15/caterpillar-method-for-character-stat-generation/">article on their blog</a> about using different sides of the same dice to generate stats for characters in D&amp;D.</p>
-<p>The suggested method sounds appealing because it aims to a) allow players to have different stats; b) make those stats somewhat random; and c) reduce the chances that players will have much better or worse stats than other players.</p>
-<p>I wanted to investigate how well it meets these three criteria, and whether we can do any better in our statistics. I focus mostly on the 4d6-drop-lowest (“4d6kh3”) method, as that is my preferred method of stat generation.</p>
-</div>
-<div class="section" id="individual-stats">
-<h1>Individual stats<a class="headerlink" href="#individual-stats" title="Permalink to this headline">¶</a></h1>
-<p>For individual stats, Goblin’s caterpillar method produces a similar distribution of stats to 4d6-drop-lowest.</p>
-<p>The average ability score is 12. The following chart shows the distribution of stats generated from caterpillar and 4d6-drop-lowest, run over 10,000 characters (and hence producing 60,000 stats).</p>
-<p>[comment]: &lt;&gt; (Insert chart).</p>
-<p>Overall means that the probability of a character having a certain stat is roughly the same whether you use caterpillar or 4d6-drop-lowest - when looking at a single stat from either method. This is good, as in general we don’t want to be using a stat generation method if it produces much higher or lower stats.</p>
-</div>
-<div class="section" id="stat-arrays">
-<h1>Stat arrays<a class="headerlink" href="#stat-arrays" title="Permalink to this headline">¶</a></h1>
-<p><strong>However, across a character’s stat array Goblin’s caterpillar method does not significantly reduce the amount of volatility between different character’s.</strong> For example, the following table compares the probability of two scenarios: a player rolling “very good” stats (2+ stats above 15 and 0 or 1 stat below 10) or “very bad” stats (0 or 1 stat above 13 and 2+ stats below 10) stats.</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Scenario</p></th>
-<th class="text-align:center head"><p>4d6-Drop<br>-Lowest</p></th>
-<th class="text-align:center head"><p>Goblin’s <br>Caterpillar</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>2 or more stats above 15, <br>0 or 1 stat below 10</p></td>
-<td class="text-align:center"><p>15%</p></td>
-<td class="text-align:center"><p>14%</p></td>
-</tr>
-<tr class="row-odd"><td><p>0 or 1 stat above 13, <br>2 or more stats below 10</p></td>
-<td class="text-align:center"><p>14%</p></td>
-<td class="text-align:center"><p>18%</p></td>
-</tr>
-</tbody>
-</table>
-<p>For these two cases, there doesn’t seem to be much difference between the two methods. And in roughly one-third of cases, a player can be expected to fall into one of these two scenarios. While the above is just an example of two scenarios, the Caterpillar method in general is not better than 4d6-drop-lowest at other definitions of very good and bad stats.</p>
-</div>
-<div class="section" id="improving-the-method">
-<h1>Improving the method<a class="headerlink" href="#improving-the-method" title="Permalink to this headline">¶</a></h1>
-<p><strong>There is a better method. Follow Goblin’s method as indicated, but instead of one stat being the sum of the <em>top</em> of the caterpillar, set one stat to be equal to the sum of the <em>bottom</em> (or “belly”) of the caterpillar.</strong> Let’s called this the Improved Goblin’s method (or maybe the Hobgoblin’s method?). This keeps a similar distribution for individual stats as 4d6-drop-lowest (like Goblin’s method.) However, it also reduces the probability of players having very different statistics. This can be seen by comparing the probability of a player rolling the same very good or very bad stats as we showed above.</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p></p></th>
-<th class="text-align:center head"><p>4d6<br>-drop-lowest</p></th>
-<th class="text-align:center head"><p>Goblin’s <br>Caterpillar</p></th>
-<th class="text-align:center head"><p>Improved<br>Goblin’s</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>2 or more stats above 15, <br>only 0 or 1 stat below 10</p></td>
-<td class="text-align:center"><p>15%</p></td>
-<td class="text-align:center"><p>14%</p></td>
-<td class="text-align:center"><p>5%</p></td>
-</tr>
-<tr class="row-odd"><td><p>Only 0 or 1 stat above 13, <br>2 or more stats below 10</p></td>
-<td class="text-align:center"><p>14%</p></td>
-<td class="text-align:center"><p>18%</p></td>
-<td class="text-align:center"><p>10%</p></td>
-</tr>
-</tbody>
-</table>
-<p>There is now less than one-sixth probability of rolling a “very good” or “very bad” roll.</p>
+  <div class="section" id="outline">
+<h1>Outline<a class="headerlink" href="#outline" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 </div>
