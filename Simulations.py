@@ -17,7 +17,7 @@ reload(StatArrays)
 stats_to_generate_4d6 = {
   "caterpillar" : StatArrays.caterpillar_stat_array,
   "improved caterpillar" : StatArrays.caterpillar_stat_array2,
-  "4d6kh3" : StatArrays.four_d_six_drop_lowest,
+  "4d6 drop lowest" : StatArrays.four_d_six_drop_lowest,
   "caterpillar with 1d6" : StatArrays.caterpillar_with_one_random_die
 }
 stats_to_generate_3d6 = {
@@ -39,7 +39,6 @@ stats_pd = pd.concat([
 # Analysis of stats
 point_buy = stats_pd.replace(StatArrays.point_buy_dict).groupby("iter").sum()
 totals = stats_pd.groupby("iter").sum()
-glue("yoyo", totals)
 
 print("Summary Statistics of Ability Scores")
 display(stats_pd.describe().applymap(PandasHelper.sig_figs, nsigfigs=3))
