@@ -5,3 +5,4 @@ sections:
   sections:
   - file: context
   - file: individual-stats
+  - file: arrays

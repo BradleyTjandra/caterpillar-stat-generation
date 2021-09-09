@@ -203,6 +203,11 @@
    Simulations
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary-statistics">
+   Summary Statistics
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -227,8 +232,90 @@
 <img alt="_images/individual-stats_3_0.png" src="_images/individual-stats_3_0.png" />
 </div>
 </div>
-<p>The average ability score is 12. The following chart shows the distribution of stats generated from caterpillar and 4d6-drop-lowest, run over 10,000 characters (and hence producing 60,000 stats).</p>
-<p>Overall means that the probability of a character having a certain stat is roughly the same whether you use caterpillar or 4d6-drop-lowest - when looking at a single stat from either method. This is good, as in general we don’t want to be using a stat generation method if it produces much higher or lower stats.</p>
+<p>The two caterpillar methods (blue and yellow lines) have a very similar shape. Meanwhile, 4d6-drop-lowest (green) has a smoother curve than the caterpillar methods, and is appears to have a slightly higher range of scores. However, overall the three distributions appear fairly similar.</p>
+</div>
+<div class="section" id="summary-statistics">
+<h2>Summary Statistics<a class="headerlink" href="#summary-statistics" title="Permalink to this headline">¶</a></h2>
+<p>This similarity can also be seen by looking at some summary statistics of the three methods.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>caterpillar</th>
+      <th>improved caterpillar</th>
+      <th>4d6 drop lowest</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>60000.0</td>
+      <td>60000.0</td>
+      <td>60000.0</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>12.0</td>
+      <td>12.0</td>
+      <td>12.2</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>3.08</td>
+      <td>3.08</td>
+      <td>2.87</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>3.0</td>
+      <td>3.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>10.0</td>
+      <td>10.0</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>12.0</td>
+      <td>12.0</td>
+      <td>12.0</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>14.0</td>
+      <td>14.0</td>
+      <td>14.0</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>18.0</td>
+      <td>18.0</td>
+      <td>18.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The three methods have very similar means and standard deviations (std). Also for all methods, 25% of stats are 10 or lower, and 25% are 14 or higher. This reinforces the view that the distributions are very similar.</p>
 </div>
 </div>
 

@@ -32,12 +32,7 @@ class ReportTables:
       axis=1
     )
 
-    point_buy = stats_pd.replace(StatArrays.point_buy_dict).groupby("iter").sum()
-    totals = stats_pd.groupby("iter").sum()
-
-    self.stats = stats_pd
-    self.point_buy = point_buy
-    self.totals = totals
+    self.set_data(stats_pd)
 
   # Analysis of stats
   def show_point_buy_distribution(self):
@@ -74,8 +69,18 @@ class ReportTables:
     fig.tight_layout()
     plt.show()
 
-  # print("Summary Statistics of Ability Scores")
-  # display(stats_pd.describe().applymap(PandasHelper.sig_figs, nsigfigs=3))
+  def set_data(self, stats):
+
+    point_buy = stats.replace(StatArrays.point_buy_dict).groupby("iter").sum()
+    totals = stats.groupby("iter").sum()
+
+    self.stats = stats
+    self.point_buy = point_buy
+    self.totals = totals
+  
+  def show_summary_statistics_stats(self):
+
+    display(self.stats.describe().applymap(PandasHelper.sig_figs, nsigfigs=3))
 
   # print("Summary Statistics of Point Buy Budget")
   # display(point_buy.describe().applymap(PandasHelper.sig_figs, nsigfigs=3))
