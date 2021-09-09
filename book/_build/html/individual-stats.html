@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Individual Stats &#8212; My sample book</title>
+    <title>Individual Stats &#8212; Caterpillar Stat Generation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,6 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Stat Arrays" href="arrays.html" />
     <link rel="prev" title="Context" href="context.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -73,7 +74,7 @@
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">Caterpillar Stat Generation</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -89,10 +90,32 @@
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="explanation.html">
    Outline
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="context.html">
+     Context
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Individual Stats
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="arrays.html">
+     Stat Arrays
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -225,19 +248,14 @@
 <div class="section" id="simulations">
 <h2>Simulations<a class="headerlink" href="#simulations" title="Permalink to this headline">¶</a></h2>
 <p>To perform this, I ran a simulation of 10,000 characters, each with 6 stats each, producing 60,000 stats. The distribution of these results is visible below.</p>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<img alt="_images/individual-stats_3_0.png" src="_images/individual-stats_3_0.png" />
-</div>
+<img alt="_images/individual-stats_1_0.png" src="_images/individual-stats_1_0.png" />
 </div>
 <p>The two caterpillar methods (blue and yellow lines) have a very similar shape. Meanwhile, 4d6-drop-lowest (green) has a smoother curve than the caterpillar methods, and is appears to have a slightly higher range of scores. However, overall the three distributions appear fairly similar.</p>
 </div>
 <div class="section" id="summary-statistics">
 <h2>Summary Statistics<a class="headerlink" href="#summary-statistics" title="Permalink to this headline">¶</a></h2>
 <p>This similarity can also be seen by looking at some summary statistics of the three methods.</p>
-<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <div class="output text_html"><div>
 <style scoped>
@@ -257,9 +275,9 @@
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>caterpillar</th>
-      <th>improved caterpillar</th>
-      <th>4d6 drop lowest</th>
+      <th>Caterpillar</th>
+      <th>Improved Caterpillar</th>
+      <th>4d6-drop-lowest</th>
     </tr>
   </thead>
   <tbody>
@@ -277,9 +295,9 @@
     </tr>
     <tr>
       <th>std</th>
-      <td>3.08</td>
-      <td>3.08</td>
-      <td>2.87</td>
+      <td>3.09</td>
+      <td>3.09</td>
+      <td>2.84</td>
     </tr>
     <tr>
       <th>min</th>
@@ -314,7 +332,6 @@
   </tbody>
 </table>
 </div></div></div>
-</div>
 <p>The three methods have very similar means and standard deviations (std). Also for all methods, 25% of stats are 10 or lower, and 25% are 14 or higher. This reinforces the view that the distributions are very similar.</p>
 </div>
 </div>
@@ -357,6 +374,15 @@
             </div>
         </a>
     </div>
+     <div id="next">
+        <a class="right-next" href="arrays.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Stat Arrays</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         
@@ -366,7 +392,7 @@
     <div class="container">
       <p>
         
-          By The Jupyter Book Community<br/>
+          By Bradley Tjandra<br/>
         
             &copy; Copyright 2021.<br/>
       </p>

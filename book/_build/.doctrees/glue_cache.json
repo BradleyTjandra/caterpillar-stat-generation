@@ -1,1 +1,65 @@
-{}
+{
+  "individual-stats": {
+    "stats_distribution_fig": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "stats_distribution_fig",
+          "mime_prefix": "application/papermill.record/"
+        },
+        "filenames": {
+          "image/png": "C:\\Users\\bjtja\\OneDrive\\2021\\DnD2021\\caterpillar-stat-generation\\book\\_build\\jupyter_execute\\individual-stats_1_0.png"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "<Figure size 432x288 with 1 Axes>",
+        "application/papermill.record/image/png": null
+      }
+    },
+    "point_buy_fig": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "point_buy_fig",
+          "mime_prefix": "application/papermill.record/"
+        },
+        "filenames": {
+          "image/png": "C:\\Users\\bjtja\\OneDrive\\2021\\DnD2021\\caterpillar-stat-generation\\book\\_build\\jupyter_execute\\individual-stats_1_2.png"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "<Figure size 432x288 with 1 Axes>",
+        "application/papermill.record/image/png": null
+      }
+    },
+    "point_buy_dist_fig": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "point_buy_dist_fig",
+          "mime_prefix": "application/papermill.record/"
+        },
+        "filenames": {
+          "image/png": "C:\\Users\\bjtja\\OneDrive\\2021\\DnD2021\\caterpillar-stat-generation\\book\\_build\\jupyter_execute\\individual-stats_1_3.png"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "<Figure size 432x288 with 1 Axes>",
+        "application/papermill.record/image/png": null
+      }
+    },
+    "summary_stats_df": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "summary_stats_df",
+          "mime_prefix": "application/papermill.record/"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "      Caterpillar Improved Caterpillar 4d6-drop-lowest\ncount     60000.0              60000.0         60000.0\nmean         12.0                 12.0            12.2\nstd          3.09                 3.09            2.84\nmin           3.0                  3.0             3.0\n25%          10.0                 10.0            10.0\n50%          12.0                 12.0            12.0\n75%          14.0                 14.0            14.0\nmax          18.0                 18.0            18.0",
+        "application/papermill.record/text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>Caterpillar</th>\n      <th>Improved Caterpillar</th>\n      <th>4d6-drop-lowest</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>count</th>\n      <td>60000.0</td>\n      <td>60000.0</td>\n      <td>60000.0</td>\n    </tr>\n    <tr>\n      <th>mean</th>\n      <td>12.0</td>\n      <td>12.0</td>\n      <td>12.2</td>\n    </tr>\n    <tr>\n      <th>std</th>\n      <td>3.09</td>\n      <td>3.09</td>\n      <td>2.84</td>\n    </tr>\n    <tr>\n      <th>min</th>\n      <td>3.0</td>\n      <td>3.0</td>\n      <td>3.0</td>\n    </tr>\n    <tr>\n      <th>25%</th>\n      <td>10.0</td>\n      <td>10.0</td>\n      <td>10.0</td>\n    </tr>\n    <tr>\n      <th>50%</th>\n      <td>12.0</td>\n      <td>12.0</td>\n      <td>12.0</td>\n    </tr>\n    <tr>\n      <th>75%</th>\n      <td>14.0</td>\n      <td>14.0</td>\n      <td>14.0</td>\n    </tr>\n    <tr>\n      <th>max</th>\n      <td>18.0</td>\n      <td>18.0</td>\n      <td>18.0</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
+      }
+    }
+  }
+}

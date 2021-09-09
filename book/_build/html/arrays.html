@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stat Arrays &#8212; My sample book</title>
+    <title>Stat Arrays &#8212; Caterpillar Stat Generation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -73,7 +73,7 @@
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">Caterpillar Stat Generation</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -89,10 +89,32 @@
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="explanation.html">
    Outline
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="context.html">
+     Context
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="individual-stats.html">
+     Individual Stats
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Stat Arrays
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -204,8 +226,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-compare-volatility">
-   How to compare volatility
+  <a class="reference internal nav-link" href="#how-can-we-compare-stat-arrays">
+   How Can We Compare Stat Arrays?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simulations">
+   Simulations
   </a>
  </li>
 </ul>
@@ -228,72 +255,20 @@
 <p>People have different standards about what is an “acceptable” amount of volatility between characters. Some parties are happy to have one player with many scores of 15 or higher, and another player with only one score above 15 and everything other stat below 12. For others, this difference would seem too large and would make the game less fun.</p>
 <p>There’s no right answer here. In my opinion, the volatility of 4d6-drop-lowest is a bit too large, and I would prefer something closer to the Improved Goblin method. However, it is possible to reduce the volatility of character stat arrays even further, for example 13th Age’s <a class="reference external" href="https://www.13thagesrd.com/character-rules/#Base_13_Random_Stat_Generation_DATP">Base 13 Random method</a>.</p>
 </div>
-<div class="section" id="how-to-compare-volatility">
-<h2>How to compare volatility<a class="headerlink" href="#how-to-compare-volatility" title="Permalink to this headline">¶</a></h2>
-<p>When comparing volatility on stat arrays, it is helpful to reduce the six ability scores to a single number representing how good the roll is. One simple way to do this would be to just add up the six scores. However, I consider having an ability score of 18 rather than 16 to be much better than having an ability score of 12 rather than 10: The former will probably increase your primary ability score and thus be used much more, while the latter many only have a small impact as it is probably not your character’s primary focus.</p>
-<p>This is also reflected in the point buy method, which has a supralinear relationship for scores of 14+. Given this seems like a popular method of stat array generation, I have decided to adopt the costs for each ability score from the stat array. However, the point buy table only go from 8 to 15. Given our three dice methods allow us to generate scores between 3 and 18, we need to extend the table.</p>
-<p>I have adopted the following schedule for this purpose:</p>
-<p>However, across a character’s stat array Goblin’s caterpillar method does not significantly reduce the amount of volatility between different character’s.** For example, the following table compares the probability of two scenarios: a player rolling “very good” stats (2+ stats above 15 and 0 or 1 stat below 10) or “very bad” stats (0 or 1 stat above 13 and 2+ stats below 10) stats.</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Scenario</p></th>
-<th class="text-align:center head"><p>4d6-Drop<br>-Lowest</p></th>
-<th class="text-align:center head"><p>Goblin’s <br>Caterpillar</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>2 or more stats above 15, <br>0 or 1 stat below 10</p></td>
-<td class="text-align:center"><p>15%</p></td>
-<td class="text-align:center"><p>14%</p></td>
-</tr>
-<tr class="row-odd"><td><p>0 or 1 stat above 13, <br>2 or more stats below 10</p></td>
-<td class="text-align:center"><p>14%</p></td>
-<td class="text-align:center"><p>18%</p></td>
-</tr>
-</tbody>
-</table>
-<p>For these two cases, there doesn’t seem to be much difference between the two methods. And in roughly one-third of cases, a player can be expected to fall into one of these two scenarios. While the above is just an example of two scenarios, the Caterpillar method in general is not better than 4d6-drop-lowest at other definitions of very good and bad stats.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set up link to python code</span>
-<span class="c1"># HIDDEN</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;../src/&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># NO CODE</span>
-
-<span class="kn">import</span> <span class="nn">StatArrays</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="n">point_buy_costs</span> <span class="o">=</span> <span class="p">[[</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">]</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">StatArrays</span><span class="o">.</span><span class="n">point_buy_dict</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span>
-<span class="n">point_buy_costs_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">point_buy_costs</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Score&quot;</span><span class="p">,</span> <span class="s2">&quot;Cost&quot;</span><span class="p">])</span>
-<span class="n">point_buy_orig</span> <span class="o">=</span> <span class="n">point_buy_costs_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span> \
-  <span class="p">(</span><span class="n">point_buy_costs_df</span><span class="o">.</span><span class="n">Score</span> <span class="o">&gt;=</span> <span class="mi">8</span><span class="p">)</span> \
-  <span class="o">&amp;</span> <span class="p">(</span><span class="n">point_buy_costs_df</span><span class="o">.</span><span class="n">Score</span> <span class="o">&lt;=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="p">]</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">point_buy_costs_df</span><span class="o">.</span><span class="n">Score</span><span class="p">,</span> <span class="n">point_buy_costs_df</span><span class="o">.</span><span class="n">Cost</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Point buy costs&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">point_buy_orig</span><span class="o">.</span><span class="n">Score</span><span class="p">,</span> <span class="n">point_buy_orig</span><span class="o">.</span><span class="n">Cost</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Extended for above 15 and below 8&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cost&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Ability score&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">axes</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">axes</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
+<div class="section" id="how-can-we-compare-stat-arrays">
+<h2>How Can We Compare Stat Arrays?<a class="headerlink" href="#how-can-we-compare-stat-arrays" title="Permalink to this headline">¶</a></h2>
+<p>When comparing stat arrays, it is helpful to reduce the six ability scores to a single number representing how good the roll is. One simple way to do this would be to just add up the six scores.</p>
+<p>However, I consider having an ability score of 18 rather than 16 to be much better than having an ability score of 12 rather than 10. The former will probably increase your primary ability score and thus be used much more, while the latter many only have a small impact as it is probably not your character’s primary focus.</p>
+<p>This is also reflected in the point buy method, which has a supralinear relationship for scores of 14+. Given this seems like a popular method of stat array generation, I have decided to adopt the costs for each ability score from the stat array. Because the point buy table only covers scores between 8 and 15, I have extended the table per the following schedule.</p>
 <div class="cell_output docutils container">
-<img alt="_images/arrays_2_0.png" src="_images/arrays_2_0.png" />
+<img alt="_images/individual-stats_1_2.png" src="_images/individual-stats_1_2.png" />
 </div>
+</div>
+<div class="section" id="simulations">
+<h2>Simulations<a class="headerlink" href="#simulations" title="Permalink to this headline">¶</a></h2>
+<p>We can now convert our stat arrays to a single “point buy budget”. The distribution of results is shown below.</p>
+<div class="cell_output docutils container">
+<img alt="_images/individual-stats_1_3.png" src="_images/individual-stats_1_3.png" />
 </div>
 </div>
 </div>
@@ -345,7 +320,7 @@
     <div class="container">
       <p>
         
-          By The Jupyter Book Community<br/>
+          By Bradley Tjandra<br/>
         
             &copy; Copyright 2021.<br/>
       </p>

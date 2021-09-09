@@ -1,8 +1,8 @@
 # Book settings
 # Learn more at https://jupyterbook.org/custoemize/config.html
 
-title: My sample book
-author: The Jupyter Book Community
+title: Caterpillar Stat Generation
+author: Bradley Tjandra
 logo: logo.png
 
 # Force re-execution of notebooks on each build.
