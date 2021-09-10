@@ -3,9 +3,7 @@
 
 # # Stat Arrays
 # 
-# In the previous section we saw that the distribution of individual stats is very similar under any of the three methods. This begs the question, why bother with the more complex-to-follow caterpillar methods? 
-# 
-# The caterpillar methods are supposed to reduce the chance of players have very high or very low stats. This can be undesireable as it makes some characters much more powerful than others, and can make it for hard for a DM to balance encounters. This section shows that Goblin's caterpillar method does _not_ achieve this goal. However, the Improved Goblin method does.
+# The caterpillar methods are supposed to reduce the chance of players have very high or very low stats. Players having very high or low stats can be undesireable as it makes some characters much more powerful than others, and can make it for hard for a DM to balance encounters. This section shows that Goblin's caterpillar method does _not_ achieve this goal. However, the Improved Goblin method does.
 # 
 # ## What is too much volatility?
 # 
@@ -25,6 +23,55 @@
 #  
 # ## Simulations
 # 
-# We can now convert our stat arrays to a single "point buy budget". The distribution of results is shown below.
+# We can now convert our stat arrays to a single "point buy budget" by calculating how much of each of the six ability scores would cost. The sum of these six costs is the total budget required for the character, and a higher budget indicates a more powerful character. The distribution of results is shown below.
 # ```{glue:} point_buy_dist_fig
-# ```
+# ```
+# 
+# Both 4d6-drop-lowest and the original caterpillar method have a similar spread of characters. however, the Improved Caterpillar method has a much narrower range of possible budgets, indicating that it is much less likely to have a character which is much stronger or weaker than other characters in the same party.
+# 
+# ## Summary Statistics
+# 
+# We can again look at the summary statistics of the three stat generation methods, as shown in the table below. I note that this has only been done over 1 million scenarios, and so 
+# ```{glue:} summary_point_buy_df
+# ```
+# 
+# We see that the average budget is between 29 to 31. This is slightly higher than the budget normally used by point buy (27). [Others](https://old.reddit.com/r/DnD/comments/29r4nr/basic_dd_5e_is_out/cinqg3w/) have already noted that 4d6-drop-lowest is expected to produce a higher budget than point buy. This now confirms that the caterpillar methods also expect to produce a better result than point-buy, albeit slightly lower than 4d6-drop-lowest.
+# 
+# The key difference is the differene in the spread (represented by the standard deviation, or std). 4d6-drop-lowest has the highest standard deviation of 10.1, while Goblin's Caterpillar method has a slightly lower standard deviation of 9.7. However, Improved Caterpillar has a much lower standard deviation of 6.0, which again confirms that this method is less likely to produce much stronger or weaker characters.
+# 
+# ## Scenario Analysis
+# 
+# A more intuitive way to try to understand character variation is through considering some scenarios. I've calculated the probability of four different scenarios occurring under the three different stat generation methods. The first two represent the chance of rolling a character with "high" stats, and the second two rolling a character with "low" stats.
+# 
+# 1. Characters with 2+ stats above 15 and only 0 or 1 stat below 10
+# 1. Characters with 3+ stats above 13 and only 0 or 1 stat below 10
+# 1. Characters with 3+ stats below 10 and only 0 or 1 stat above 15 
+# 1. Characters with 2+ stats below 10 and only 0 or 1 stat above 13
+# 
+# ```{glue:} scenarios_df
+# ```
+# 
+# We can see that in each of the scenarios, these types of "extreme" characters are much more likely on 4d6-drop-lowest or original Caterpillar, compared to the Improved Caterpillar.
+# 
+# ## Comparing Correlation
+# 
+# Finally, we can look at the pair-wise correlation between each stat. This is a measure which indicates how "similar" stats are. For those unfamiliar with correlation:
+# 
+# * A correlation of "1" between the first and second stat would indicate that whenever the first stat is high, the second stat will be high. 
+# * A correlation of "-1" means the opposite: whenever the first stat is low the second stat is high, and whenever the second stat is low the first stat is high. 
+# * A correlation of "0" means there is no relationship between the two stats.
+# 
+# ```{glue:} corr_fig
+# ```
+# 
+# The correlation between stats in 4d6-drop-lowest is effectively 0. This makes sense, as there is no link between each of the six stats - they are all generated from separate die rolls.
+# 
+# The Caterpillar method does have a slight negative correlation between stats. This means that when one stat is high, others will tend to be lower. However, from previous analysis we know that this negative correlation is fairly insignificant.
+# 
+# The Improved Caterpillar method has a much higher amount of negative correlation. This is consistent with what we've seen before: Improved Caterpillar means that characters will tend to not have very high or low stats across the board.
+# 
+# ## Summary
+# 
+# 4d6-drop-lowest and Caterpillar produce a similar amount of variations between characters. This makes it less ideal as a stat generation technique. The Improved Caterpillar method achieves much less variation.
+# 
+# The next session considers even more alternatives for stat generation, and discusses the merits of those compared to the Improved Caterpillar.

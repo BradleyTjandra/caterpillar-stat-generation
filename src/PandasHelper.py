@@ -36,3 +36,4 @@ def sig_figs(number, nsigfigs: int = 1) -> str:
 
   rounded = round(number, ndigits)
   return(str(rounded))
+

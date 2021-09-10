@@ -1,7 +1,13 @@
 Context
 ============================
 
+In D&D, character creation involves creating six numbers ("stats") which represent how good you are at six different areas. These six different stats become your "stat array".
+
+There are numerous ways to create stat arrays. While some ways are deterministic (i.e. you get to choose which what number each stat is, subject to some constraints), a common method to add some randomisation to process 
+
 Recently Goblin's Henchman (Goblin) shared an [article on their blog](https://goblinshenchman.wordpress.com/2020/08/15/caterpillar-method-for-character-stat-generation/) about using different sides of the same dice to generate stats for characters in D&D.
+
+The general idea is that, instead of rolling 4d6 and dropping the lowest dice
 
 The suggested method sounds appealing to me because it purports to:
 

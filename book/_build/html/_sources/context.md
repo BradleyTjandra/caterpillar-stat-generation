@@ -3,6 +3,8 @@ Context
 
 Recently Goblin's Henchman (Goblin) shared an [article on their blog](https://goblinshenchman.wordpress.com/2020/08/15/caterpillar-method-for-character-stat-generation/) about using different sides of the same dice to generate stats for characters in D&D.
 
+The general approach 
+
 The suggested method sounds appealing to me because it purports to:
 
 1. It allows players to have different stats. This makes it better than the standard array and (to some extent) point-buy.

@@ -51,6 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Code" href="code.html" />
     <link rel="prev" title="Individual Stats" href="individual-stats.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -115,6 +116,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code.html">
+   Code
+  </a>
  </li>
 </ul>
 
@@ -235,6 +241,26 @@
    Simulations
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary-statistics">
+   Summary Statistics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scenario-analysis">
+   Scenario Analysis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparing-correlation">
+   Comparing Correlation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -248,8 +274,7 @@
                 
   <div class="section" id="stat-arrays">
 <h1>Stat Arrays<a class="headerlink" href="#stat-arrays" title="Permalink to this headline">¶</a></h1>
-<p>In the previous section we saw that the distribution of individual stats is very similar under any of the three methods. This begs the question, why bother with the more complex-to-follow caterpillar methods?</p>
-<p>The caterpillar methods are supposed to reduce the chance of players have very high or very low stats. This can be undesireable as it makes some characters much more powerful than others, and can make it for hard for a DM to balance encounters. This section shows that Goblin’s caterpillar method does <em>not</em> achieve this goal. However, the Improved Goblin method does.</p>
+<p>The caterpillar methods are supposed to reduce the chance of players have very high or very low stats. Players having very high or low stats can be undesireable as it makes some characters much more powerful than others, and can make it for hard for a DM to balance encounters. This section shows that Goblin’s caterpillar method does <em>not</em> achieve this goal. However, the Improved Goblin method does.</p>
 <div class="section" id="what-is-too-much-volatility">
 <h2>What is too much volatility?<a class="headerlink" href="#what-is-too-much-volatility" title="Permalink to this headline">¶</a></h2>
 <p>People have different standards about what is an “acceptable” amount of volatility between characters. Some parties are happy to have one player with many scores of 15 or higher, and another player with only one score above 15 and everything other stat below 12. For others, this difference would seem too large and would make the game less fun.</p>
@@ -261,15 +286,181 @@
 <p>However, I consider having an ability score of 18 rather than 16 to be much better than having an ability score of 12 rather than 10. The former will probably increase your primary ability score and thus be used much more, while the latter many only have a small impact as it is probably not your character’s primary focus.</p>
 <p>This is also reflected in the point buy method, which has a supralinear relationship for scores of 14+. Given this seems like a popular method of stat array generation, I have decided to adopt the costs for each ability score from the stat array. Because the point buy table only covers scores between 8 and 15, I have extended the table per the following schedule.</p>
 <div class="cell_output docutils container">
-<img alt="_images/individual-stats_1_2.png" src="_images/individual-stats_1_2.png" />
+<img alt="_images/code_5_0.png" src="_images/code_5_0.png" />
 </div>
 </div>
 <div class="section" id="simulations">
 <h2>Simulations<a class="headerlink" href="#simulations" title="Permalink to this headline">¶</a></h2>
-<p>We can now convert our stat arrays to a single “point buy budget”. The distribution of results is shown below.</p>
+<p>We can now convert our stat arrays to a single “point buy budget” by calculating how much of each of the six ability scores would cost. The sum of these six costs is the total budget required for the character, and a higher budget indicates a more powerful character. The distribution of results is shown below.</p>
 <div class="cell_output docutils container">
-<img alt="_images/individual-stats_1_3.png" src="_images/individual-stats_1_3.png" />
+<img alt="_images/code_6_0.png" src="_images/code_6_0.png" />
 </div>
+<p>Both 4d6-drop-lowest and the original caterpillar method have a similar spread of characters. however, the Improved Caterpillar method has a much narrower range of possible budgets, indicating that it is much less likely to have a character which is much stronger or weaker than other characters in the same party.</p>
+</div>
+<div class="section" id="summary-statistics">
+<h2>Summary Statistics<a class="headerlink" href="#summary-statistics" title="Permalink to this headline">¶</a></h2>
+<p>We can again look at the summary statistics of the three stat generation methods, as shown in the table below. I note that this has only been done over 1 million scenarios, and so</p>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>4d6-drop-lowest</th>
+      <th>Caterpillar</th>
+      <th>Improved Caterpillar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>1000.0</td>
+      <td>1000.0</td>
+      <td>1000.0</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>30.4</td>
+      <td>29.1</td>
+      <td>29.6</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>10.2</td>
+      <td>10.0</td>
+      <td>5.78</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>-</td>
+      <td>6.0</td>
+      <td>17.0</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>23.0</td>
+      <td>22.0</td>
+      <td>25.0</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>30.0</td>
+      <td>28.0</td>
+      <td>29.0</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>37.0</td>
+      <td>36.0</td>
+      <td>33.0</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>67.0</td>
+      <td>66.0</td>
+      <td>48.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+<p>We see that the average budget is between 29 to 31. This is slightly higher than the budget normally used by point buy (27). <a class="reference external" href="https://old.reddit.com/r/DnD/comments/29r4nr/basic_dd_5e_is_out/cinqg3w/">Others</a> have already noted that 4d6-drop-lowest is expected to produce a higher budget than point buy. This now confirms that the caterpillar methods also expect to produce a better result than point-buy, albeit slightly lower than 4d6-drop-lowest.</p>
+<p>The key difference is the differene in the spread (represented by the standard deviation, or std). 4d6-drop-lowest has the highest standard deviation of 10.1, while Goblin’s Caterpillar method has a slightly lower standard deviation of 9.7. However, Improved Caterpillar has a much lower standard deviation of 6.0, which again confirms that this method is less likely to produce much stronger or weaker characters.</p>
+</div>
+<div class="section" id="scenario-analysis">
+<h2>Scenario Analysis<a class="headerlink" href="#scenario-analysis" title="Permalink to this headline">¶</a></h2>
+<p>A more intuitive way to try to understand character variation is through considering some scenarios. I’ve calculated the probability of four different scenarios occurring under the three different stat generation methods. The first two represent the chance of rolling a character with “high” stats, and the second two rolling a character with “low” stats.</p>
+<ol class="simple">
+<li><p>Characters with 2+ stats above 15 and only 0 or 1 stat below 10</p></li>
+<li><p>Characters with 3+ stats above 13 and only 0 or 1 stat below 10</p></li>
+<li><p>Characters with 3+ stats below 10 and only 0 or 1 stat above 15</p></li>
+<li><p>Characters with 2+ stats below 10 and only 0 or 1 stat above 13</p></li>
+</ol>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>4d6-drop-lowest</th>
+      <th>Caterpillar</th>
+      <th>Improved Caterpillar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Scenario 1</th>
+      <td>14.8%</td>
+      <td>15.1%</td>
+      <td>7.0%</td>
+    </tr>
+    <tr>
+      <th>Scenario 2</th>
+      <td>29.4%</td>
+      <td>24.5%</td>
+      <td>18.9%</td>
+    </tr>
+    <tr>
+      <th>Scenario 3</th>
+      <td>7.7%</td>
+      <td>7.8%</td>
+      <td>0.5%</td>
+    </tr>
+    <tr>
+      <th>Scenario 4</th>
+      <td>14.1%</td>
+      <td>16.2%</td>
+      <td>11.6%</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+<p>We can see that in each of the scenarios, these types of “extreme” characters are much more likely on 4d6-drop-lowest or original Caterpillar, compared to the Improved Caterpillar.</p>
+</div>
+<div class="section" id="comparing-correlation">
+<h2>Comparing Correlation<a class="headerlink" href="#comparing-correlation" title="Permalink to this headline">¶</a></h2>
+<p>Finally, we can look at the pair-wise correlation between each stat. This is a measure which indicates how “similar” stats are. For those unfamiliar with correlation:</p>
+<ul class="simple">
+<li><p>A correlation of “1” between the first and second stat would indicate that whenever the first stat is high, the second stat will be high.</p></li>
+<li><p>A correlation of “-1” means the opposite: whenever the first stat is low the second stat is high, and whenever the second stat is low the first stat is high.</p></li>
+<li><p>A correlation of “0” means there is no relationship between the two stats.</p></li>
+</ul>
+<div class="cell_output docutils container">
+<img alt="_images/code_9_0.png" src="_images/code_9_0.png" />
+</div>
+<p>The correlation between stats in 4d6-drop-lowest is effectively 0. This makes sense, as there is no link between each of the six stats - they are all generated from separate die rolls.</p>
+<p>The Caterpillar method does have a slight negative correlation between stats. This means that when one stat is high, others will tend to be lower. However, from previous analysis we know that this negative correlation is fairly insignificant.</p>
+<p>The Improved Caterpillar method has a much higher amount of negative correlation. This is consistent with what we’ve seen before: Improved Caterpillar means that characters will tend to not have very high or low stats across the board.</p>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>4d6-drop-lowest and Caterpillar produce a similar amount of variations between characters. This makes it less ideal as a stat generation technique. The Improved Caterpillar method achieves much less variation.</p>
+<p>The next session considers even more alternatives for stat generation, and discusses the merits of those compared to the Improved Caterpillar.</p>
 </div>
 </div>
 
@@ -311,6 +502,15 @@
             </div>
         </a>
     </div>
+     <div id="next">
+        <a class="right-next" href="code.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Code</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         

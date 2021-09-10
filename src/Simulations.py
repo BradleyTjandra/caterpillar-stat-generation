@@ -81,7 +81,8 @@ display(pd.DataFrame( {
   }))
   
 # Correlation analysis
-display(CorrelationAnalysis.analyse(stats_pd))
+reload(CorrelationAnalysis)
+CorrelationAnalysis.analyse(stats_pd)
 
 # Graphs
 fig, axes = plt.subplots(ncols=2)
