@@ -1,11 +1,11 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Context &#8212; My sample book</title>
+    <title>&lt;no title&gt; &#8212; Caterpillar Stat Generation</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -44,9 +44,9 @@
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -72,13 +72,13 @@
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">Caterpillar Stat Generation</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -88,9 +88,41 @@
  </li>
 </ul>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="body.html">
+   Body
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="context.html">
+     Context
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="individual-stats.html">
+     Individual Stats
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="arrays.html">
+     Stat Arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="alternatives.html">
+     Alternative Methods
+    </a>
+   </li>
+  </ul>
+ </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="explanation.html">
-   Outline
+  <a class="reference internal" href="code.html">
+   Code
   </a>
  </li>
 </ul>
@@ -99,7 +131,10 @@
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+  <a href="./roll">
+  Yo!
+</a>
+
 </div>
 
 </div>
@@ -134,7 +169,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/notes.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/blah.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -150,11 +185,11 @@
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/BradleyTjandra/caterpillar-stat-generation"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotes.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/BradleyTjandra/caterpillar-stat-generation/issues/new?title=Issue%20on%20page%20%2Fblah.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -178,28 +213,8 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Context
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#individual-stats">
-   Individual stats
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#stat-arrays">
-   Stat arrays
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#improving-the-method">
-   Improving the method
-  </a>
- </li>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
 </ul>
 
             </nav>
@@ -211,74 +226,12 @@
         
               <div>
                 
-  <div class="section" id="context">
-<h1>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h1>
-<p>Recently Goblin’s Henchman shared an <a class="reference external" href="https://goblinshenchman.wordpress.com/2020/08/15/caterpillar-method-for-character-stat-generation/">article on their blog</a> about using different sides of the same dice to generate stats for characters in D&amp;D.</p>
-<p>The suggested method sounds appealing because it aims to a) allow players to have different stats; b) make those stats somewhat random; and c) reduce the chances that players will have much better or worse stats than other players.</p>
-<p>I wanted to investigate how well it meets these three criteria, and whether we can do any better in our statistics. I focus mostly on the 4d6-drop-lowest (“4d6kh3”) method, as that is my preferred method of stat generation.</p>
-</div>
-<div class="section" id="individual-stats">
-<h1>Individual stats<a class="headerlink" href="#individual-stats" title="Permalink to this headline">¶</a></h1>
-<p>For individual stats, Goblin’s caterpillar method produces a similar distribution of stats to 4d6-drop-lowest.</p>
-<p>The average ability score is 12. The following chart shows the distribution of stats generated from caterpillar and 4d6-drop-lowest, run over 10,000 characters (and hence producing 60,000 stats).</p>
-<p>[comment]: &lt;&gt; (Insert chart).</p>
-<p>Overall means that the probability of a character having a certain stat is roughly the same whether you use caterpillar or 4d6-drop-lowest - when looking at a single stat from either method. This is good, as in general we don’t want to be using a stat generation method if it produces much higher or lower stats.</p>
-</div>
-<div class="section" id="stat-arrays">
-<h1>Stat arrays<a class="headerlink" href="#stat-arrays" title="Permalink to this headline">¶</a></h1>
-<p><strong>However, across a character’s stat array Goblin’s caterpillar method does not significantly reduce the amount of volatility between different character’s.</strong> For example, the following table compares the probability of two scenarios: a player rolling “very good” stats (2+ stats above 15 and 0 or 1 stat below 10) or “very bad” stats (0 or 1 stat above 13 and 2+ stats below 10) stats.</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Scenario</p></th>
-<th class="text-align:center head"><p>4d6-Drop<br>-Lowest</p></th>
-<th class="text-align:center head"><p>Goblin’s <br>Caterpillar</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>2 or more stats above 15, <br>0 or 1 stat below 10</p></td>
-<td class="text-align:center"><p>15%</p></td>
-<td class="text-align:center"><p>14%</p></td>
-</tr>
-<tr class="row-odd"><td><p>0 or 1 stat above 13, <br>2 or more stats below 10</p></td>
-<td class="text-align:center"><p>14%</p></td>
-<td class="text-align:center"><p>18%</p></td>
-</tr>
-</tbody>
-</table>
-<p>For these two cases, there doesn’t seem to be much difference between the two methods. And in roughly one-third of cases, a player can be expected to fall into one of these two scenarios. While the above is just an example of two scenarios, the Caterpillar method in general is not better than 4d6-drop-lowest at other definitions of very good and bad stats.</p>
-</div>
-<div class="section" id="improving-the-method">
-<h1>Improving the method<a class="headerlink" href="#improving-the-method" title="Permalink to this headline">¶</a></h1>
-<p><strong>There is a better method. Follow Goblin’s method as indicated, but instead of one stat being the sum of the <em>top</em> of the caterpillar, set one stat to be equal to the sum of the <em>bottom</em> (or “belly”) of the caterpillar.</strong> Let’s called this the Improved Goblin’s method (or maybe the Hobgoblin’s method?). This keeps a similar distribution for individual stats as 4d6-drop-lowest (like Goblin’s method.) However, it also reduces the probability of players having very different statistics. This can be seen by comparing the probability of a player rolling the same very good or very bad stats as we showed above.</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p></p></th>
-<th class="text-align:center head"><p>4d6<br>-drop-lowest</p></th>
-<th class="text-align:center head"><p>Goblin’s <br>Caterpillar</p></th>
-<th class="text-align:center head"><p>Improved<br>Goblin’s</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>2 or more stats above 15, <br>only 0 or 1 stat below 10</p></td>
-<td class="text-align:center"><p>15%</p></td>
-<td class="text-align:center"><p>14%</p></td>
-<td class="text-align:center"><p>5%</p></td>
-</tr>
-<tr class="row-odd"><td><p>Only 0 or 1 stat above 13, <br>2 or more stats below 10</p></td>
-<td class="text-align:center"><p>14%</p></td>
-<td class="text-align:center"><p>18%</p></td>
-<td class="text-align:center"><p>10%</p></td>
-</tr>
-</tbody>
-</table>
-<p>There is now less than one-sixth probability of rolling a “very good” or “very bad” roll.</p>
-</div>
-
+  
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "BradleyTjandra/caterpillar-stat-generation",
             ref: "master",
         },
         codeMirrorConfig: {
@@ -297,10 +250,14 @@
               </div>
               
         
-        <div class='prev-next-bottom'>
             
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+
+</div>
         
         </div>
     </div>
@@ -308,9 +265,9 @@
     <div class="container">
       <p>
         
-          By The Jupyter Book Community<br/>
+          By Bradley Tjandra<br/>
         
-            &copy; Copyright 2020.<br/>
+            &copy; Copyright 2021.<br/>
       </p>
     </div>
   </footer>

@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -44,9 +44,9 @@
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -91,8 +91,8 @@
 </ul>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="explanation.html">
-   Caterpillar Stat Generation
+  <a class="reference internal" href="body.html">
+   Body
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -125,6 +125,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="code.html">
    Code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://bradleytjandra.github.io/caterpillar-stat-generation/roll.html">
+   Stat Generator
   </a>
  </li>
 </ul>
@@ -184,11 +189,11 @@
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/BradleyTjandra/caterpillar-stat-generation"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Farrays.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/BradleyTjandra/caterpillar-stat-generation/issues/new?title=Issue%20on%20page%20%2Farrays.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -209,7 +214,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/arrays.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/BradleyTjandra/caterpillar-stat-generation/master?urlpath=lab/tree/arrays.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -217,6 +222,9 @@
         
         
         
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -291,14 +299,14 @@
 <p>However, I consider having an ability score of 18 rather than 16 to be much better than having an ability score of 12 rather than 10. The former will probably increase your primary ability score and thus be used much more, while the latter many only have a small impact as it is probably not your character’s primary focus.</p>
 <p>This is also reflected in the point buy method, which has a supralinear relationship for scores of 14+. Given this seems like a popular method of stat array generation, I have decided to adopt the costs for each ability score from the stat array. Because the point buy table only covers scores between 8 and 15, I have extended the table per the following schedule.</p>
 <div class="cell_output docutils container">
-<img alt="_images/code_6_0.png" src="_images/code_6_0.png" />
+<img alt="_images/code_7_0.png" src="_images/code_7_0.png" />
 </div>
 </div>
 <div class="section" id="simulations">
 <h2>Simulations<a class="headerlink" href="#simulations" title="Permalink to this headline">¶</a></h2>
 <p>We can now convert our stat arrays to a single “point buy budget” by calculating how much of each of the six ability scores would cost. The sum of these six costs is the total budget required for the character, and a higher budget indicates a more powerful character. The distribution of results is shown below.</p>
 <div class="cell_output docutils container">
-<img alt="_images/code_7_0.png" src="_images/code_7_0.png" />
+<img alt="_images/code_8_0.png" src="_images/code_8_0.png" />
 </div>
 <p>Both 4d6-drop-lowest and the original caterpillar method have a similar spread of characters. however, the Improved Caterpillar method has a much narrower range of possible budgets, indicating that it is much less likely to have a character which is much stronger or weaker than other characters in the same party.</p>
 </div>
@@ -339,18 +347,18 @@
     <tr>
       <th>mean</th>
       <td>30.8</td>
-      <td>29.2</td>
       <td>29.1</td>
+      <td>29.2</td>
     </tr>
     <tr>
       <th>std</th>
       <td>10.1</td>
-      <td>9.84</td>
+      <td>9.82</td>
       <td>5.95</td>
     </tr>
     <tr>
       <th>min</th>
-      <td>-5.0</td>
+      <td>-8.0</td>
       <td>4.0</td>
       <td>17.0</td>
     </tr>
@@ -363,7 +371,7 @@
     <tr>
       <th>50%</th>
       <td>30.0</td>
-      <td>29.0</td>
+      <td>28.0</td>
       <td>29.0</td>
     </tr>
     <tr>
@@ -374,7 +382,7 @@
     </tr>
     <tr>
       <th>max</th>
-      <td>90.0</td>
+      <td>82.0</td>
       <td>66.0</td>
       <td>50.0</td>
     </tr>
@@ -420,27 +428,27 @@
   <tbody>
     <tr>
       <th>Scenario 1</th>
-      <td>15.0%</td>
-      <td>14.4%</td>
-      <td>5.8%</td>
+      <td>14.7%</td>
+      <td>14.2%</td>
+      <td>5.7%</td>
     </tr>
     <tr>
       <th>Scenario 2</th>
-      <td>31.3%</td>
-      <td>25.9%</td>
-      <td>15.7%</td>
+      <td>31.2%</td>
+      <td>25.7%</td>
+      <td>16.0%</td>
     </tr>
     <tr>
       <th>Scenario 3</th>
       <td>6.6%</td>
       <td>7.5%</td>
-      <td>0.9%</td>
+      <td>0.8%</td>
     </tr>
     <tr>
       <th>Scenario 4</th>
       <td>13.5%</td>
       <td>17.5%</td>
-      <td>10.1%</td>
+      <td>9.8%</td>
     </tr>
   </tbody>
 </table>
@@ -456,7 +464,7 @@
 <li><p>A correlation of “0” means there is no relationship between the two stats.</p></li>
 </ul>
 <div class="cell_output docutils container">
-<img alt="_images/code_10_0.png" src="_images/code_10_0.png" />
+<img alt="_images/code_11_0.png" src="_images/code_11_0.png" />
 </div>
 <p>The correlation between stats in 4d6-drop-lowest is effectively 0. This makes sense, as there is no link between each of the six stats - they are all generated from separate die rolls.</p>
 <p>The Caterpillar method does have a slight negative correlation between stats. This means that when one stat is high, others will tend to be lower. However, from previous analysis we know that this negative correlation is fairly insignificant.</p>
@@ -473,7 +481,7 @@
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "BradleyTjandra/caterpillar-stat-generation",
             ref: "master",
         },
         codeMirrorConfig: {
