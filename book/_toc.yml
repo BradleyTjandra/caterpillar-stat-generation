@@ -1,9 +1,8 @@
 format: jb-article
 root: intro
 sections:
-  - file: explanation
+  - file: context
     sections:
-    - file: context
     - file: individual-stats
     - file: arrays
     - file: alternatives

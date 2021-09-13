@@ -15,4 +15,13 @@
 # 3. It reduces the chances that players will have much better or worse stats than other players.
 # 4. It still allow players to have incredibly bad or incredibly good stats - but then the other stats will be good or bad to partially offset this.
 # 
-# These desiderata may not be important for you, in which case the options will be somewhat different.
+# I acknowledge these desiderata are somewhat subjective, but for _me_ they make a good game.
+# 
+# ## Possible alternative methods
+# 
+# A couple of methods have been raised as part of this discussion:
+# 
+# 1. Using the 13th Age's approach
+# 2. Instead of using the bottom faces, rolling a new set of 3d6
+# 
+# For each of these, I will show the resulting distribution 
