@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Context &#8212; Caterpillar Stat Generation</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Individual Stats" href="individual-stats.html" />
+    <link rel="prev" title="Caterpillar Stat Generation" href="explanation.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Caterpillar Stat Generation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   tl;dr
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="explanation.html">
+   Caterpillar Stat Generation
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Context
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="individual-stats.html">
+     Individual Stats
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="arrays.html">
+     Stat Arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="alternatives.html">
+     Alternative Methods
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="code.html">
+   Code
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/context.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontext.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#issues-with-4d6-drop-lowest">
+   Issues with 4d6-drop-lowest
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#goblin-s-caterpillar-method">
+   Goblin’s Caterpillar Method
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#improved-goblin-method">
+   Improved Goblin Method
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="context">
+<h1>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h1>
+<p>In D&amp;D, character creation involves creating six numbers (“stats”) which represent how good you are at six different areas. These six different stats become your “stat array”.</p>
+<p>There are numerous ways to create stat arrays. While some ways are deterministic (i.e. you get to choose which what number each stat is, subject to some constraints), a common method to add some randomisation to this process is called “4d6-drop-lowest”. Under this method, you roll four dice and sum up the numbers on the three highest dice, and that is the base number for one of your stats. This is repeated for the other five stats.</p>
+<div class="section" id="issues-with-4d6-drop-lowest">
+<h2>Issues with 4d6-drop-lowest<a class="headerlink" href="#issues-with-4d6-drop-lowest" title="Permalink to this headline">¶</a></h2>
+<p>While this method allows for some randomisation, it can also lead to characters with consistently high or consistently low stats. This can have a few issues:</p>
+<ul class="simple">
+<li><p>Player characters in the same party may not be able perform at the same level, and one player will feel their character is much less powerful.</p></li>
+<li><p>It makes it harder for the Dungeon Master (DM) to design challenges for the players, as player characters may be more or less powerful than what the “standard rules” expect</p></li>
+<li><p>It requires more work to balance encounters for the players, as what is very easy for one player character may be incredibly difficult for another player who rolled lower stats.</p></li>
+</ul>
+</div>
+<div class="section" id="goblin-s-caterpillar-method">
+<h2>Goblin’s Caterpillar Method<a class="headerlink" href="#goblin-s-caterpillar-method" title="Permalink to this headline">¶</a></h2>
+<p>Recently Goblin’s Henchman (Goblin) shared an <a class="reference external" href="https://goblinshenchman.wordpress.com/2020/08/15/caterpillar-method-for-character-stat-generation/">article on their blog</a> about using different sides of the same dice to generate stats for characters in D&amp;D.</p>
+<p>The general idea is that, instead of using 4d6-drop-lowest, you would roll the stats following the following:</p>
+<ul class="simple">
+<li><p><strong>Stat 1:</strong> Add up the front face</p></li>
+<li><p><strong>Stat 2:</strong> Add up the top face</p></li>
+<li><p><strong>Stat 3:</strong> Add up the back face</p></li>
+<li><p><strong>Stat 4:</strong> Add up all exposed faces on the left-most cube</p></li>
+<li><p><strong>Stat 5:</strong> Add up all exposed faces on the right-most cube</p></li>
+<li><p><strong>Stat 6:</strong> Add up all exposed faces on the centre cube. If the front face is a 4, 5 or 6, then also add the bottom face.</p></li>
+</ul>
+<p>This purports to reduce the possibility the some characters will be much more powerful than others. However, as I shown later in the report, it doesn’t actually do a good job at achieving this. You are equally like to roll a very powerful character, or a very weak character, using this method as you are with 4d6-drop-lowest.</p>
+</div>
+<div class="section" id="improved-goblin-method">
+<h2>Improved Goblin Method<a class="headerlink" href="#improved-goblin-method" title="Permalink to this headline">¶</a></h2>
+<p>However, Goblin’s idea of using the opposite side of dice seems clever, and the method can be easily tweaked to correctly achieve a less variable character generation. I call this the <strong>Improved Goblin</strong> method:</p>
+<ul class="simple">
+<li><p><strong>Stat 1:</strong> Add up the front face</p></li>
+<li><p><strong>Stat 2:</strong> Add up the <em>bottom</em> face - this is the only change to Goblin’s method.</p></li>
+<li><p><strong>Stat 3:</strong> Add up the back face</p></li>
+<li><p><strong>Stat 4:</strong> Add up all exposed faces on the left-most cube</p></li>
+<li><p><strong>Stat 5:</strong> Add up all exposed faces on the right-most cube</p></li>
+<li><p><strong>Stat 6:</strong> Add up all exposed faces on the centre cube. If the front face is a 4, 5 or 6, then also add the bottom face.</p></li>
+</ul>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Stat generation is an important part of building characters in D&amp;D. 4d6-drop-lowest and the Goblin Method don’t do a good job at avoiding very strong or very weak characters. Instead, the Improved Goblin is a better stat generation method to use.</p>
+<p>The next section will first consider how these three methods compare based on the average stat generated.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="explanation.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Caterpillar Stat Generation</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="individual-stats.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Individual Stats</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Bradley Tjandra<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
