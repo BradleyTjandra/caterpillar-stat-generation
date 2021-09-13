@@ -1,4 +1,4 @@
-Caterpillar Stat Generation
+Context
 ============================
 
 In D&D, character creation involves creating six numbers ("stats") which represent how good you are at six different areas. These six different stats become your "stat array".

@@ -3,6 +3,7 @@ from importlib import reload
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
 import pandas as pd
+import json
 
 import CorrelationAnalysis
 import StatArrays
@@ -11,7 +12,7 @@ import PandasHelper
 from IPython.display import display
 
 # Generate stats
-num_iterations = 10000
+num_iterations = 100_000
 reload(StatArrays)
 stats_to_generate_4d6 = {
   "caterpillar" : StatArrays.caterpillar_stat_array,
@@ -119,3 +120,12 @@ ax.set_xlabel("Score")
 ax.legend()
 ax.grid(True)
 plt.show()
+
+for c in totals.columns:
+  total_counts = totals.value_counts(c, normalize=True)
+  total_counts.sort_index(inplace=True)
+  print(c)
+  print(json.dumps(total_counts.cumsum().round(4).to_dict()))
+
+# Stats
+'{"65": 0.014, "66": 0.0443, "67": 0.0924, "68": 0.161, "69": 0.2538, "70": 0.3714, "71": 0.4893, "72": 0.6024, "73": 0.7066, "74": 0.7974, "75": 0.8698, "76": 0.9177, "77": 0.9532, "78": 0.9769, "79": 0.9905, "80": 0.9979, "81": 1.0}'

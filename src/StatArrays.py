@@ -141,3 +141,9 @@ def caterpillar_v2_3d6() -> list:
   stat_array.append(dice[1].back + dice[1].top + dice[1].front)
 
   return(stat_array)
+
+def thirtheenth_age() -> list:
+
+  six_d_six = np.random.randint(low = 1, high = 8, size = [6])
+  stat_array = 12 + six_d_six - np.roll(six_d_six, 1)
+  return(stat_array)

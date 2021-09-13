@@ -1,9 +1,12 @@
 format: jb-article
 root: intro
 sections:
-  - file: context
+  - file: body
     sections:
+    - file: context
     - file: individual-stats
     - file: arrays
     - file: alternatives
   - file: code
+  - url: https://bradleytjandra.github.io/caterpillar-stat-generation/roll.html
+    title: Stat Generator

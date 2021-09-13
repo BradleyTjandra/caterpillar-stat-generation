@@ -29,12 +29,16 @@ class Die:
   def get_adjacent_edges(self, face: int) -> list:
     
     return ([i for i in range(1,7) if i not in [face, 7-face]])
-
+  
   def sample(self) -> None:
 
     top_face = random.randint(1, 6)
     front_face = random.choice(self.get_adjacent_edges(top_face))
 
+    self.set_faces(top_face, front_face)
+
+  def set_faces(self, top_face:int , front_face: int) -> None:
+    
     top_face_coords = self.unrolled_die[top_face-1]
     front_face_coords = self.unrolled_die[front_face-1]
     top_and_front_faces = np.vstack((
@@ -81,3 +85,13 @@ class Die:
     output += f"left: {self.left}\n"
     output += f"right: {self.right}\n"
     return(output)
+
+  def to_dict(self):
+    return({
+      "top" : self.top,
+      "front": self.front,
+      "back": self.back,
+      "bottom": self.bottom,
+      "left": self.left,
+      "right": self.right,
+    })

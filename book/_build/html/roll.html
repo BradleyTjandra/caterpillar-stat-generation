@@ -1,0 +1,44 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Caterpillar Stat Generator</title>
+  <link rel="stylesheet" href="https://bradleytjandra.github.io/styles.css">
+</head>
+<body>
+  <div style="padding-left: 20%; padding-right: 20%">
+    <h1>Caterpillar Stat Roller</h1>
+    <div>
+      <h2 id="methodHeader" style="display: inline">Improved Caterpillar Stat Generation</h2>
+      <span style="float: right">
+        <select id="methodChoice" onchange="onRerollClick()">
+          <option value="improved">Improved Goblin method</option>
+          <option value="goblin">Original Goblin method (not recommended)</option>
+        </select>
+      </span>
+    </div>
+
+    <div id="caption" style="padding-top: 24px">Based on the <a href="https://bradleytjandra.github.io/caterpillar-stat-generation/">Improved Caterpillar method.</a></div>
+
+    <table>
+      <tr>
+        <td id="stat1">10</td>
+        <td id="stat2">10</td>
+        <td id="stat3">10</td>
+      </tr>
+      <tr>
+        <td id="stat4">10</td>
+        <td id="stat5">10</td>
+        <td id="stat6">10</td>
+      </tr>
+    </table>
+
+    <div>Sum of all stats is <b><span id="totalStats">70</span></b>.</div>
+
+    <div style="padding-bottom: 12px" id="comment">You are in the bottom x% of the stat arrays. How unlucky!</div>
+
+    <input type="button" value="Reroll" onclick="onRerollClick()">
+  </div>
+</body>
+</html> 
+
+<script src="./roll.js"></script>

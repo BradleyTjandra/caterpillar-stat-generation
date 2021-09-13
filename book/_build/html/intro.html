@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -44,14 +44,14 @@
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Caterpillar Stat Generation" href="context.html" />
+    <link rel="next" title="Body" href="body.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -90,8 +90,8 @@
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="context.html">
-   Caterpillar Stat Generation
+  <a class="reference internal" href="body.html">
+   Body
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -99,6 +99,11 @@
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="context.html">
+     Context
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="individual-stats.html">
      Individual Stats
@@ -119,6 +124,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="code.html">
    Code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://bradleytjandra.github.io/caterpillar-stat-generation/roll.html">
+   Stat Generator
   </a>
  </li>
 </ul>
@@ -178,11 +188,11 @@
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/BradleyTjandra/caterpillar-stat-generation"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/BradleyTjandra/caterpillar-stat-generation/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -232,7 +242,7 @@
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "BradleyTjandra/caterpillar-stat-generation",
             ref: "master",
         },
         codeMirrorConfig: {
@@ -258,10 +268,10 @@
 <div class='prev-next-bottom'>
     
      <div id="next">
-        <a class="right-next" href="context.html" title="next page">
+        <a class="right-next" href="body.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Caterpillar Stat Generation</p>
+                <p class="prevnext-title">Body</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
