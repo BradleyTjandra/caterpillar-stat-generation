@@ -6,4 +6,5 @@ sections:
     - file: context
     - file: individual-stats
     - file: arrays
+    - file: alternatives
   - file: code

@@ -1,5 +1,5 @@
 # Book settings
-# Learn more at https://jupyterbook.org/custoemize/config.html
+# Learn more at https://jupyterbook.org/customize/config.html
 
 title: Caterpillar Stat Generation
 author: Bradley Tjandra
@@ -9,6 +9,7 @@ logo: logo.png
 # See https://jupyterbook.org/content/execute.html
 execute:
   execute_notebooks: 'force'
+  timeout: 100000
 
 # Define the name of the latex output file for PDF builds
 latex:

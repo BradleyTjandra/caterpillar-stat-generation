@@ -52,7 +52,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Individual Stats" href="individual-stats.html" />
-    <link rel="prev" title="Outline" href="explanation.html" />
+    <link rel="prev" title="Caterpillar Stat Generation" href="explanation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -92,7 +92,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="explanation.html">
-   Outline
+   Caterpillar Stat Generation
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -113,6 +113,11 @@
    <li class="toctree-l2">
     <a class="reference internal" href="arrays.html">
      Stat Arrays
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="alternatives.html">
+     Alternative Methods
     </a>
    </li>
   </ul>
@@ -204,6 +209,34 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#issues-with-4d6-drop-lowest">
+   Issues with 4d6-drop-lowest
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#goblin-s-caterpillar-method">
+   Goblin’s Caterpillar Method
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#improved-goblin-method">
+   Improved Goblin Method
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -214,18 +247,48 @@
                 
   <div class="section" id="context">
 <h1>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h1>
+<p>In D&amp;D, character creation involves creating six numbers (“stats”) which represent how good you are at six different areas. These six different stats become your “stat array”.</p>
+<p>There are numerous ways to create stat arrays. While some ways are deterministic (i.e. you get to choose which what number each stat is, subject to some constraints), a common method to add some randomisation to this process is called “4d6-drop-lowest”. Under this method, you roll four dice and sum up the numbers on the three highest dice, and that is the base number for one of your stats. This is repeated for the other five stats.</p>
+<div class="section" id="issues-with-4d6-drop-lowest">
+<h2>Issues with 4d6-drop-lowest<a class="headerlink" href="#issues-with-4d6-drop-lowest" title="Permalink to this headline">¶</a></h2>
+<p>While this method allows for some randomisation, it can also lead to characters with consistently high or consistently low stats. This can have a few issues:</p>
+<ul class="simple">
+<li><p>Player characters in the same party may not be able perform at the same level, and one player will feel their character is much less powerful.</p></li>
+<li><p>It makes it harder for the Dungeon Master (DM) to design challenges for the players, as player characters may be more or less powerful than what the “standard rules” expect</p></li>
+<li><p>It requires more work to balance encounters for the players, as what is very easy for one player character may be incredibly difficult for another player who rolled lower stats.</p></li>
+</ul>
+</div>
+<div class="section" id="goblin-s-caterpillar-method">
+<h2>Goblin’s Caterpillar Method<a class="headerlink" href="#goblin-s-caterpillar-method" title="Permalink to this headline">¶</a></h2>
 <p>Recently Goblin’s Henchman (Goblin) shared an <a class="reference external" href="https://goblinshenchman.wordpress.com/2020/08/15/caterpillar-method-for-character-stat-generation/">article on their blog</a> about using different sides of the same dice to generate stats for characters in D&amp;D.</p>
-<p>The general approach</p>
-<p>The suggested method sounds appealing to me because it purports to:</p>
-<ol class="simple">
-<li><p>It allows players to have different stats. This makes it better than the standard array and (to some extent) point-buy.</p></li>
-<li><p>It makes stats somewhat random, so that players can have more unique characters without needing to worry about whether they should be min-maxing. This makes it better than point-buy</p></li>
-<li><p>Reduce the chances that players will have much better or worse stats than other players. This makes it better than 4d6-drop-lowest.</p></li>
-<li><p>It generally produces higher numbers. This makes it better than the standard array (where the average score is 10.5) or 3d6.</p></li>
-</ol>
-<p>These desiderata may not be important for you, but I felt they were sometimes issues enough that the potential for a different approach interests me.</p>
-<p>I wanted to investigate how well it meets these three criteria, and whether we can do any better in our statistics. I focus mostly on the 4d6-drop-lowest (“4d6kh3”) method, as that is my preferred method of stat generation.</p>
-<p>All of the code used to generate these statistics can be seen here.</p>
+<p>The general idea is that, instead of using 4d6-drop-lowest, you would roll the stats following the following:</p>
+<ul class="simple">
+<li><p><strong>Stat 1:</strong> Add up the front face</p></li>
+<li><p><strong>Stat 2:</strong> Add up the top face</p></li>
+<li><p><strong>Stat 3:</strong> Add up the back face</p></li>
+<li><p><strong>Stat 4:</strong> Add up all exposed faces on the left-most cube</p></li>
+<li><p><strong>Stat 5:</strong> Add up all exposed faces on the right-most cube</p></li>
+<li><p><strong>Stat 6:</strong> Add up all exposed faces on the centre cube. If the front face is a 4, 5 or 6, then also add the bottom face.</p></li>
+</ul>
+<p>This purports to reduce the possibility the some characters will be much more powerful than others. However, as I shown later in the report, it doesn’t actually do a good job at achieving this. You are equally like to roll a very powerful character, or a very weak character, using this method as you are with 4d6-drop-lowest.</p>
+</div>
+<div class="section" id="improved-goblin-method">
+<h2>Improved Goblin Method<a class="headerlink" href="#improved-goblin-method" title="Permalink to this headline">¶</a></h2>
+<p>However, Goblin’s idea of using the opposite side of dice seems clever, and the method can be easily tweaked to correctly achieve a less variable character generation. I call this the <strong>Improved Goblin</strong> method:</p>
+<ul class="simple">
+<li><p><strong>Stat 1:</strong> Add up the front face</p></li>
+<li><p><strong>Stat 2:</strong> Add up the <em>bottom</em> face - this is the only change to Goblin’s method.</p></li>
+<li><p><strong>Stat 3:</strong> Add up the back face</p></li>
+<li><p><strong>Stat 4:</strong> Add up all exposed faces on the left-most cube</p></li>
+<li><p><strong>Stat 5:</strong> Add up all exposed faces on the right-most cube</p></li>
+<li><p><strong>Stat 6:</strong> Add up all exposed faces on the centre cube. If the front face is a 4, 5 or 6, then also add the bottom face.</p></li>
+</ul>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Stat generation is an important part of building characters in D&amp;D. 4d6-drop-lowest and the Goblin Method don’t do a good job at avoiding very strong or very weak characters. Instead, the Improved Goblin is a better stat generation method to use.</p>
+<p>The next section will first consider how these three methods compare based on the average stat generated.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -262,7 +325,7 @@
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Outline</p>
+                <p class="prevnext-title">Caterpillar Stat Generation</p>
             </div>
         </a>
     </div>

@@ -9,7 +9,7 @@ For example, to replicate the 4d6-drop-lowest:
 
 * **Stat 1:** Add up the front face
 * **Stat 2:** Add up the *bottom* face - this is the only change to Goblin's method.
-* **Stat 3:** Add up the back 
+* **Stat 3:** Add up the back face
 * **Stat 4:** Add up all exposed faces on the left-most cube
 * **Stat 5:** Add up all exposed faces on the right-most cube
 * **Stat 6:** Add up all exposed faces on the centre cube. If the front face is a 4, 5 or 6, then also add the bottom face.

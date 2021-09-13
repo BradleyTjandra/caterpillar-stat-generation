@@ -79,8 +79,8 @@ def analyse(data: pd.core.frame.DataFrame) -> list:
   # colour bar
   first_axis = flat_axes[0].images[0]
   mappable = ScalarMappable(norm=first_axis.norm, cmap=first_axis.get_cmap())
-  # fig.colorbar(mappable, location="bottom", ax=axes.ravel().tolist(), aspect=64, shrink=0.95)
-  fig.colorbar(mappable, location="bottom", ax=flat_axes, aspect=64, shrink=0.95,
+  fig.colorbar(mappable, location="bottom", ax=flat_axes, 
+  aspect=64, shrink=0.95,
   pad=0.05)
 
   return(fig)
