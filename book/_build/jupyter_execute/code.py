@@ -62,7 +62,7 @@ import PandasHelper
 
 
 # Generate stats
-num_iterations = 1_000
+num_iterations = 100_000
 stats_to_generate = {
   "4d6-drop-lowest" : StatArrays.four_d_six_drop_lowest,
   "Caterpillar" : StatArrays.caterpillar_stat_array,
