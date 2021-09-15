@@ -25,8 +25,16 @@ stats_to_generate_3d6 = {
   "improved caterpillar" : StatArrays.caterpillar_v2_3d6,
   "3d6" : StatArrays.three_d_six,
 }
+stats_for_analysis = {
+  "caterpillar" : StatArrays.caterpillar_stat_array,
+  "improved caterpillar" : StatArrays.caterpillar_stat_array2,
+  "4d6 drop lowest" : StatArrays.four_d_six_drop_lowest,
+  "caterpillar (3d6)" : StatArrays.caterpillar_3d6,
+  "improved caterpillar (3d6)" : StatArrays.caterpillar_v2_3d6,
+  "3d6" : StatArrays.three_d_six,
+}
 
-stats_to_generate = stats_to_generate_4d6
+stats_to_generate = stats_for_analysis
 stats_pd = pd.concat([
   PandasHelper.stats_arrays_to_pd(
     [stat_generator() for i in range(num_iterations)],
@@ -109,17 +117,55 @@ axes[1].grid(True)
 fig.tight_layout()
 plt.show()
 
-count = PandasHelper.create_counts(
-  stats_pd.reset_index().pivot(index="iter", columns="stat", values="improved caterpillar"),
+# Distribution of stats
+# table = stats_pd.reset_index()
+# table.stat = table.stat + 1
+# fig, axes = plt.subplots(ncols=2, nrows=2, figsize = (12, 8))
+# flat_axes = axes.flatten()
+# for ax, method in zip(flat_axes, stats_pd.columns):
+#   count = PandasHelper.create_counts(
+#     table.pivot(index="iter", columns="stat", values=method),
+#     normalize=True)
+#   [line_plot(ax, count, c) for c in count.columns]
+#   ax.set_ylabel(f"Distribution (out of {num_iterations:,} samples)")
+#   ax.yaxis.set_major_formatter(mtick.PercentFormatter(xmax=1, decimals=1))
+#   ax.set_xlabel("Score")
+#   ax.legend()
+#   ax.grid(True)
+#   ax.set_title(method)
+
+# fig.tight_layout()
+# fig.show()
+
+
+# Distribution of stats
+table = stats_pd.reset_index()
+table.stat = table.stat + 1
+fig, axes = plt.subplots(ncols=2, figsize = (12, 4))
+flat_axes = axes.flatten()
+count_origs = [
+  PandasHelper.create_counts(
+  table.pivot(index="iter", columns="stat", values=v),
   normalize=True)
-fig, ax = plt.subplots()
-axes = [line_plot(ax, count, c) for c in count.columns]
-ax.set_ylabel(f"Distribution of improved caterpillar \nmethod (out of {num_iterations:,} samples)")
-ax.yaxis.set_major_formatter(mtick.PercentFormatter(xmax=1, decimals=1))
-ax.set_xlabel("Score")
-ax.legend()
-ax.grid(True)
-plt.show()
+  for v in ["4d6 drop lowest", "3d6"]]
+for ax, method, v in zip(flat_axes, ["caterpillar", "caterpillar (3d6)"], ["4d6 drop lowest", "3d6"]):
+  count = PandasHelper.create_counts(
+    table.pivot(index="iter", columns="stat", values=method),
+    normalize=True)
+  orig = PandasHelper.create_counts(
+    table.pivot(index="iter", columns="stat", values=v),
+    normalize=True)
+  [line_plot(ax, count, c) for c in count.columns]
+  ax.bar(orig.index, orig[1], label=v)
+  ax.set_ylabel(f"Distribution (out of {num_iterations:,} samples)")
+  ax.yaxis.set_major_formatter(mtick.PercentFormatter(xmax=1, decimals=1))
+  ax.set_xlabel("Score")
+  ax.legend()
+  ax.grid(True)
+  ax.set_title(method)
+
+fig.tight_layout()
+fig.show()
 
 for c in totals.columns:
   total_counts = totals.value_counts(c, normalize=True)
@@ -129,3 +175,6 @@ for c in totals.columns:
 
 # Stats
 '{"65": 0.014, "66": 0.0443, "67": 0.0924, "68": 0.161, "69": 0.2538, "70": 0.3714, "71": 0.4893, "72": 0.6024, "73": 0.7066, "74": 0.7974, "75": 0.8698, "76": 0.9177, "77": 0.9532, "78": 0.9769, "79": 0.9905, "80": 0.9979, "81": 1.0}'
+
+
+line_plot = lambda ax, df, c: ax.plot(df.index, df[c], label=c)

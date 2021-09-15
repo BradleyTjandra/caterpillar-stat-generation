@@ -63,7 +63,13 @@ function improvedGoblinRoll() {
 function origGoblinRoll() {
 
   methodHeaderElem.innerHTML = 'Original Goblin Caterpillar method'
-  captionElem.innerHTML = '<div>Based on <a href="https://bradleytjandra.github.io/caterpillar-stat-generation/context.html#goblin-s-caterpillar-method/">Goblin\'s Caterpillar method.</a></div>';
+  captionElem.innerHTML = `
+    <div>
+      Based on 
+        <a href="https://bradleytjandra.github.io/caterpillar-stat-generation/context.html#goblin-s-caterpillar-method/">Goblin\'s Caterpillar method</a>.
+      This method is not recommended (see the article for reasons why).
+    </div>
+    `;
 
   let dice = [1, 2, 3].map(getRandomDie);
   statElems[0].innerHTML = dice[0].front + dice[1].front + dice[2].front;

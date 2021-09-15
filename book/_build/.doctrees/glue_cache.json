@@ -1,93 +1,16 @@
 {
   "code": {
-    "stats_distribution_fig": {
+    "summary_point_buy_df": {
       "output_type": "display_data",
       "metadata": {
         "scrapbook": {
-          "name": "stats_distribution_fig",
-          "mime_prefix": "application/papermill.record/"
-        },
-        "filenames": {
-          "image/png": "C:\\Users\\bjtja\\OneDrive\\2021\\DnD2021\\caterpillar-stat-generation\\book\\_build\\jupyter_execute\\code_5_0.png"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 432x288 with 1 Axes>",
-        "application/papermill.record/image/png": null
-      }
-    },
-    "point_buy_fig": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "point_buy_fig",
-          "mime_prefix": "application/papermill.record/"
-        },
-        "filenames": {
-          "image/png": "C:\\Users\\bjtja\\OneDrive\\2021\\DnD2021\\caterpillar-stat-generation\\book\\_build\\jupyter_execute\\code_7_0.png"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 432x288 with 1 Axes>",
-        "application/papermill.record/image/png": null
-      }
-    },
-    "scenarios_df": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "scenarios_df",
-          "mime_prefix": "application/papermill.record/"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "           4d6-drop-lowest Caterpillar Improved Caterpillar\nScenario 1           14.7%       14.2%                 5.7%\nScenario 2           31.2%       25.7%                16.0%\nScenario 3            6.6%        7.5%                 0.8%\nScenario 4           13.5%       17.5%                 9.8%",
-        "application/papermill.record/text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>4d6-drop-lowest</th>\n      <th>Caterpillar</th>\n      <th>Improved Caterpillar</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>Scenario 1</th>\n      <td>14.7%</td>\n      <td>14.2%</td>\n      <td>5.7%</td>\n    </tr>\n    <tr>\n      <th>Scenario 2</th>\n      <td>31.2%</td>\n      <td>25.7%</td>\n      <td>16.0%</td>\n    </tr>\n    <tr>\n      <th>Scenario 3</th>\n      <td>6.6%</td>\n      <td>7.5%</td>\n      <td>0.8%</td>\n    </tr>\n    <tr>\n      <th>Scenario 4</th>\n      <td>13.5%</td>\n      <td>17.5%</td>\n      <td>9.8%</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
-      }
-    },
-    "point_buy_dist_fig": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "point_buy_dist_fig",
-          "mime_prefix": "application/papermill.record/"
-        },
-        "filenames": {
-          "image/png": "C:\\Users\\bjtja\\OneDrive\\2021\\DnD2021\\caterpillar-stat-generation\\book\\_build\\jupyter_execute\\code_8_0.png"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 432x288 with 1 Axes>",
-        "application/papermill.record/image/png": null
-      }
-    },
-    "one_random_stats": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "one_random_stats",
+          "name": "summary_point_buy_df",
           "mime_prefix": ""
         }
       },
       "data": {
-        "text/plain": "       4d6-drop-lowest  Improved Caterpillar  Roll again for 1 stat\ncount    600000.000000         600000.000000          600000.000000\nmean         12.247675             11.960278              11.956742\nstd           2.846277              3.090269               3.086427\nmin           3.000000              3.000000               3.000000\n25%          10.000000             10.000000              10.000000\n50%          12.000000             12.000000              12.000000\n75%          14.000000             14.000000              14.000000\nmax          18.000000             18.000000              18.000000",
-        "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>4d6-drop-lowest</th>\n      <th>Improved Caterpillar</th>\n      <th>Roll again for 1 stat</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>count</th>\n      <td>600000.000000</td>\n      <td>600000.000000</td>\n      <td>600000.000000</td>\n    </tr>\n    <tr>\n      <th>mean</th>\n      <td>12.247675</td>\n      <td>11.960278</td>\n      <td>11.956742</td>\n    </tr>\n    <tr>\n      <th>std</th>\n      <td>2.846277</td>\n      <td>3.090269</td>\n      <td>3.086427</td>\n    </tr>\n    <tr>\n      <th>min</th>\n      <td>3.000000</td>\n      <td>3.000000</td>\n      <td>3.000000</td>\n    </tr>\n    <tr>\n      <th>25%</th>\n      <td>10.000000</td>\n      <td>10.000000</td>\n      <td>10.000000</td>\n    </tr>\n    <tr>\n      <th>50%</th>\n      <td>12.000000</td>\n      <td>12.000000</td>\n      <td>12.000000</td>\n    </tr>\n    <tr>\n      <th>75%</th>\n      <td>14.000000</td>\n      <td>14.000000</td>\n      <td>14.000000</td>\n    </tr>\n    <tr>\n      <th>max</th>\n      <td>18.000000</td>\n      <td>18.000000</td>\n      <td>18.000000</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
-      }
-    },
-    "corr_fig": {
-      "output_type": "display_data",
-      "metadata": {
-        "scrapbook": {
-          "name": "corr_fig",
-          "mime_prefix": "application/papermill.record/"
-        },
-        "filenames": {
-          "image/png": "C:\\Users\\bjtja\\OneDrive\\2021\\DnD2021\\caterpillar-stat-generation\\book\\_build\\jupyter_execute\\code_11_0.png"
-        }
-      },
-      "data": {
-        "application/papermill.record/text/plain": "<Figure size 1080x360 with 4 Axes>",
-        "application/papermill.record/image/png": null
+        "text/plain": "      4d6-drop-lowest Caterpillar Improved Caterpillar\ncount        100000.0    100000.0             100000.0\nmean             30.7        29.1                 29.1\nstd              10.2        9.83                 5.92\nmin              -3.0         4.0                 17.0\n25%              24.0        22.0                 25.0\n50%              30.0        28.0                 29.0\n75%              37.0        36.0                 33.0\nmax              80.0        66.0                 50.0",
+        "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>4d6-drop-lowest</th>\n      <th>Caterpillar</th>\n      <th>Improved Caterpillar</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>count</th>\n      <td>100000.0</td>\n      <td>100000.0</td>\n      <td>100000.0</td>\n    </tr>\n    <tr>\n      <th>mean</th>\n      <td>30.7</td>\n      <td>29.1</td>\n      <td>29.1</td>\n    </tr>\n    <tr>\n      <th>std</th>\n      <td>10.2</td>\n      <td>9.83</td>\n      <td>5.92</td>\n    </tr>\n    <tr>\n      <th>min</th>\n      <td>-3.0</td>\n      <td>4.0</td>\n      <td>17.0</td>\n    </tr>\n    <tr>\n      <th>25%</th>\n      <td>24.0</td>\n      <td>22.0</td>\n      <td>25.0</td>\n    </tr>\n    <tr>\n      <th>50%</th>\n      <td>30.0</td>\n      <td>28.0</td>\n      <td>29.0</td>\n    </tr>\n    <tr>\n      <th>75%</th>\n      <td>37.0</td>\n      <td>36.0</td>\n      <td>33.0</td>\n    </tr>\n    <tr>\n      <th>max</th>\n      <td>80.0</td>\n      <td>66.0</td>\n      <td>50.0</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
       }
     },
     "13th_age_fig": {
@@ -122,6 +45,48 @@
         "application/papermill.record/image/png": null
       }
     },
+    "stats_distribution_fig": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "stats_distribution_fig",
+          "mime_prefix": "application/papermill.record/"
+        },
+        "filenames": {
+          "image/png": "C:\\Users\\bjtja\\OneDrive\\2021\\DnD2021\\caterpillar-stat-generation\\book\\_build\\jupyter_execute\\code_5_0.png"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "<Figure size 432x288 with 1 Axes>",
+        "application/papermill.record/image/png": null
+      }
+    },
+    "13th_age_stats": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "13th_age_stats",
+          "mime_prefix": ""
+        }
+      },
+      "data": {
+        "text/plain": "       4d6-drop-lowest  Improved Caterpillar       13th Age\ncount    600000.000000         600000.000000  600000.000000\nmean         12.243158             11.957040      12.000000\nstd           2.849791              3.086706       2.829622\nmin           3.000000              3.000000       6.000000\n25%          10.000000             10.000000      10.000000\n50%          12.000000             12.000000      12.000000\n75%          14.000000             14.000000      14.000000\nmax          18.000000             18.000000      18.000000",
+        "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>4d6-drop-lowest</th>\n      <th>Improved Caterpillar</th>\n      <th>13th Age</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>count</th>\n      <td>600000.000000</td>\n      <td>600000.000000</td>\n      <td>600000.000000</td>\n    </tr>\n    <tr>\n      <th>mean</th>\n      <td>12.243158</td>\n      <td>11.957040</td>\n      <td>12.000000</td>\n    </tr>\n    <tr>\n      <th>std</th>\n      <td>2.849791</td>\n      <td>3.086706</td>\n      <td>2.829622</td>\n    </tr>\n    <tr>\n      <th>min</th>\n      <td>3.000000</td>\n      <td>3.000000</td>\n      <td>6.000000</td>\n    </tr>\n    <tr>\n      <th>25%</th>\n      <td>10.000000</td>\n      <td>10.000000</td>\n      <td>10.000000</td>\n    </tr>\n    <tr>\n      <th>50%</th>\n      <td>12.000000</td>\n      <td>12.000000</td>\n      <td>12.000000</td>\n    </tr>\n    <tr>\n      <th>75%</th>\n      <td>14.000000</td>\n      <td>14.000000</td>\n      <td>14.000000</td>\n    </tr>\n    <tr>\n      <th>max</th>\n      <td>18.000000</td>\n      <td>18.000000</td>\n      <td>18.000000</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
+      }
+    },
+    "scenarios_df": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "scenarios_df",
+          "mime_prefix": "application/papermill.record/"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "           4d6-drop-lowest Caterpillar Improved Caterpillar\nScenario 1           14.9%       14.2%                 5.7%\nScenario 2           31.1%       25.8%                15.6%\nScenario 3            6.6%        7.5%                 0.9%\nScenario 4           13.5%       17.6%                10.0%",
+        "application/papermill.record/text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>4d6-drop-lowest</th>\n      <th>Caterpillar</th>\n      <th>Improved Caterpillar</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>Scenario 1</th>\n      <td>14.9%</td>\n      <td>14.2%</td>\n      <td>5.7%</td>\n    </tr>\n    <tr>\n      <th>Scenario 2</th>\n      <td>31.1%</td>\n      <td>25.8%</td>\n      <td>15.6%</td>\n    </tr>\n    <tr>\n      <th>Scenario 3</th>\n      <td>6.6%</td>\n      <td>7.5%</td>\n      <td>0.9%</td>\n    </tr>\n    <tr>\n      <th>Scenario 4</th>\n      <td>13.5%</td>\n      <td>17.6%</td>\n      <td>10.0%</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
+      }
+    },
     "summary_stats_df": {
       "output_type": "display_data",
       "metadata": {
@@ -135,30 +100,65 @@
         "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>4d6-drop-lowest</th>\n      <th>Caterpillar</th>\n      <th>Improved Caterpillar</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>count</th>\n      <td>600000.0</td>\n      <td>600000.0</td>\n      <td>600000.0</td>\n    </tr>\n    <tr>\n      <th>mean</th>\n      <td>12.2</td>\n      <td>12.0</td>\n      <td>12.0</td>\n    </tr>\n    <tr>\n      <th>std</th>\n      <td>2.85</td>\n      <td>3.09</td>\n      <td>3.09</td>\n    </tr>\n    <tr>\n      <th>min</th>\n      <td>3.0</td>\n      <td>3.0</td>\n      <td>3.0</td>\n    </tr>\n    <tr>\n      <th>25%</th>\n      <td>10.0</td>\n      <td>10.0</td>\n      <td>10.0</td>\n    </tr>\n    <tr>\n      <th>50%</th>\n      <td>12.0</td>\n      <td>12.0</td>\n      <td>12.0</td>\n    </tr>\n    <tr>\n      <th>75%</th>\n      <td>14.0</td>\n      <td>14.0</td>\n      <td>14.0</td>\n    </tr>\n    <tr>\n      <th>max</th>\n      <td>18.0</td>\n      <td>18.0</td>\n      <td>18.0</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
       }
     },
-    "summary_point_buy_df": {
+    "point_buy_dist_fig": {
       "output_type": "display_data",
       "metadata": {
         "scrapbook": {
-          "name": "summary_point_buy_df",
-          "mime_prefix": ""
+          "name": "point_buy_dist_fig",
+          "mime_prefix": "application/papermill.record/"
+        },
+        "filenames": {
+          "image/png": "C:\\Users\\bjtja\\OneDrive\\2021\\DnD2021\\caterpillar-stat-generation\\book\\_build\\jupyter_execute\\code_8_0.png"
         }
       },
       "data": {
-        "text/plain": "      4d6-drop-lowest Caterpillar Improved Caterpillar\ncount        100000.0    100000.0             100000.0\nmean             30.8        29.1                 29.2\nstd              10.1        9.82                 5.95\nmin              -8.0         4.0                 17.0\n25%              24.0        22.0                 25.0\n50%              30.0        28.0                 29.0\n75%              37.0        36.0                 33.0\nmax              82.0        66.0                 50.0",
-        "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>4d6-drop-lowest</th>\n      <th>Caterpillar</th>\n      <th>Improved Caterpillar</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>count</th>\n      <td>100000.0</td>\n      <td>100000.0</td>\n      <td>100000.0</td>\n    </tr>\n    <tr>\n      <th>mean</th>\n      <td>30.8</td>\n      <td>29.1</td>\n      <td>29.2</td>\n    </tr>\n    <tr>\n      <th>std</th>\n      <td>10.1</td>\n      <td>9.82</td>\n      <td>5.95</td>\n    </tr>\n    <tr>\n      <th>min</th>\n      <td>-8.0</td>\n      <td>4.0</td>\n      <td>17.0</td>\n    </tr>\n    <tr>\n      <th>25%</th>\n      <td>24.0</td>\n      <td>22.0</td>\n      <td>25.0</td>\n    </tr>\n    <tr>\n      <th>50%</th>\n      <td>30.0</td>\n      <td>28.0</td>\n      <td>29.0</td>\n    </tr>\n    <tr>\n      <th>75%</th>\n      <td>37.0</td>\n      <td>36.0</td>\n      <td>33.0</td>\n    </tr>\n    <tr>\n      <th>max</th>\n      <td>82.0</td>\n      <td>66.0</td>\n      <td>50.0</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
+        "application/papermill.record/text/plain": "<Figure size 432x288 with 1 Axes>",
+        "application/papermill.record/image/png": null
       }
     },
-    "13th_age_stats": {
+    "corr_fig": {
       "output_type": "display_data",
       "metadata": {
         "scrapbook": {
-          "name": "13th_age_stats",
+          "name": "corr_fig",
+          "mime_prefix": "application/papermill.record/"
+        },
+        "filenames": {
+          "image/png": "C:\\Users\\bjtja\\OneDrive\\2021\\DnD2021\\caterpillar-stat-generation\\book\\_build\\jupyter_execute\\code_11_0.png"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "<Figure size 1080x360 with 4 Axes>",
+        "application/papermill.record/image/png": null
+      }
+    },
+    "one_random_stats": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "one_random_stats",
           "mime_prefix": ""
         }
       },
       "data": {
-        "text/plain": "       4d6-drop-lowest  Improved Caterpillar       13th Age\ncount    600000.000000         600000.000000  600000.000000\nmean         12.247675             11.960278      12.000000\nstd           2.846277              3.090269       2.825212\nmin           3.000000              3.000000       6.000000\n25%          10.000000             10.000000      10.000000\n50%          12.000000             12.000000      12.000000\n75%          14.000000             14.000000      14.000000\nmax          18.000000             18.000000      18.000000",
-        "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>4d6-drop-lowest</th>\n      <th>Improved Caterpillar</th>\n      <th>13th Age</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>count</th>\n      <td>600000.000000</td>\n      <td>600000.000000</td>\n      <td>600000.000000</td>\n    </tr>\n    <tr>\n      <th>mean</th>\n      <td>12.247675</td>\n      <td>11.960278</td>\n      <td>12.000000</td>\n    </tr>\n    <tr>\n      <th>std</th>\n      <td>2.846277</td>\n      <td>3.090269</td>\n      <td>2.825212</td>\n    </tr>\n    <tr>\n      <th>min</th>\n      <td>3.000000</td>\n      <td>3.000000</td>\n      <td>6.000000</td>\n    </tr>\n    <tr>\n      <th>25%</th>\n      <td>10.000000</td>\n      <td>10.000000</td>\n      <td>10.000000</td>\n    </tr>\n    <tr>\n      <th>50%</th>\n      <td>12.000000</td>\n      <td>12.000000</td>\n      <td>12.000000</td>\n    </tr>\n    <tr>\n      <th>75%</th>\n      <td>14.000000</td>\n      <td>14.000000</td>\n      <td>14.000000</td>\n    </tr>\n    <tr>\n      <th>max</th>\n      <td>18.000000</td>\n      <td>18.000000</td>\n      <td>18.000000</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
+        "text/plain": "       4d6-drop-lowest  Improved Caterpillar  Roll again for 1 stat\ncount    600000.000000         600000.000000           600000.00000\nmean         12.243158             11.957040               11.95428\nstd           2.849791              3.086706                3.08866\nmin           3.000000              3.000000                3.00000\n25%          10.000000             10.000000               10.00000\n50%          12.000000             12.000000               12.00000\n75%          14.000000             14.000000               14.00000\nmax          18.000000             18.000000               18.00000",
+        "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>4d6-drop-lowest</th>\n      <th>Improved Caterpillar</th>\n      <th>Roll again for 1 stat</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>count</th>\n      <td>600000.000000</td>\n      <td>600000.000000</td>\n      <td>600000.00000</td>\n    </tr>\n    <tr>\n      <th>mean</th>\n      <td>12.243158</td>\n      <td>11.957040</td>\n      <td>11.95428</td>\n    </tr>\n    <tr>\n      <th>std</th>\n      <td>2.849791</td>\n      <td>3.086706</td>\n      <td>3.08866</td>\n    </tr>\n    <tr>\n      <th>min</th>\n      <td>3.000000</td>\n      <td>3.000000</td>\n      <td>3.00000</td>\n    </tr>\n    <tr>\n      <th>25%</th>\n      <td>10.000000</td>\n      <td>10.000000</td>\n      <td>10.00000</td>\n    </tr>\n    <tr>\n      <th>50%</th>\n      <td>12.000000</td>\n      <td>12.000000</td>\n      <td>12.00000</td>\n    </tr>\n    <tr>\n      <th>75%</th>\n      <td>14.000000</td>\n      <td>14.000000</td>\n      <td>14.00000</td>\n    </tr>\n    <tr>\n      <th>max</th>\n      <td>18.000000</td>\n      <td>18.000000</td>\n      <td>18.00000</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
+      }
+    },
+    "point_buy_fig": {
+      "output_type": "display_data",
+      "metadata": {
+        "scrapbook": {
+          "name": "point_buy_fig",
+          "mime_prefix": "application/papermill.record/"
+        },
+        "filenames": {
+          "image/png": "C:\\Users\\bjtja\\OneDrive\\2021\\DnD2021\\caterpillar-stat-generation\\book\\_build\\jupyter_execute\\code_7_0.png"
+        }
+      },
+      "data": {
+        "application/papermill.record/text/plain": "<Figure size 432x288 with 1 Axes>",
+        "application/papermill.record/image/png": null
       }
     }
   }
