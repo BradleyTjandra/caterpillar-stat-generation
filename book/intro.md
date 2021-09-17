@@ -1,7 +1,7 @@
 tl;dr
 ============================
 
-Goblin's [caterpillar method](https://goblinshenchman.wordpress.com/2020/08/15/caterpillar-method-for-character-stat-generation/) of generating stats doesn't actually reduce the probability that some players will roll really good stats, and others will roll really low stats.
+Goblin's [caterpillar method](https://goblinshenchman.wordpress.com/2020/08/15/caterpillar-method-for-character-stat-generation/) of generating stats doesn't actually reduce the probability that some players will roll really good stats, and others will roll really bad stats.
 
 There is a better method. Follow Goblin's method as indicated, but instead of one stat being the sum of the *top* of the caterpillar, set one stat to be equal to the sum of the *bottom* (or "belly") of the caterpillar.
 

@@ -230,8 +230,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#improved-goblin-method">
-   Improved Goblin Method
+  <a class="reference internal nav-link" href="#improved-caterpillar-method">
+   Improved Caterpillar Method
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -253,20 +253,20 @@
   <div class="section" id="context">
 <h1>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h1>
 <p>In D&amp;D, character creation involves creating six numbers (“stats”) which represent how good you are at six different areas. These six different stats become your “stat array”.</p>
-<p>There are numerous ways to create stat arrays. While some ways are deterministic (i.e. you get to choose which what number each stat is, subject to some constraints), a common method to add some randomisation to this process is called “4d6-drop-lowest”. Under this method, you roll four dice and sum up the numbers on the three highest dice, and that is the base number for one of your stats. This is repeated for the other five stats.</p>
+<p>There are numerous ways to create stat arrays. While some ways are deterministic (i.e. you get to choose what number each stat is, subject to some constraints), a common method to add some randomisation to this process is called “4d6-drop-lowest”. Under this method, you roll four dice and sum up the numbers on the three highest dice. The resulting sum becomes the one of your stats <a class="footnote-reference brackets" href="#id2" id="id1">1</a>. This is repeated for the other five stats.</p>
 <div class="section" id="issues-with-4d6-drop-lowest">
 <h2>Issues with 4d6-drop-lowest<a class="headerlink" href="#issues-with-4d6-drop-lowest" title="Permalink to this headline">¶</a></h2>
-<p>While this method allows for some randomisation, it can also lead to characters with consistently high or consistently low stats. This can have a few issues:</p>
+<p>While this method allows for some randomisation, it can also lead to characters with consistently high or low stats. This can have a few issues:</p>
 <ul class="simple">
-<li><p>Player characters in the same party may not be able perform at the same level, and one player will feel their character is much less powerful.</p></li>
-<li><p>It makes it harder for the Dungeon Master (DM) to design challenges for the players, as player characters may be more or less powerful than what the “standard rules” expect</p></li>
-<li><p>It requires more work to balance encounters for the players, as what is very easy for one player character may be incredibly difficult for another player who rolled lower stats.</p></li>
+<li><p>Player characters in the same party may not be able perform at the same level, and one player may feel their character is less powerful.</p></li>
+<li><p>It makes it harder for the Dungeon Master (DM) to design challenges for the players, as player characters may be more or less powerful than what the “standard rules” expect.</p></li>
+<li><p>It requires more work to balance encounters for the players, as what is very easy for one player character who rolled high stats may be incredibly difficult for another player who rolled lower stats.</p></li>
 </ul>
 </div>
 <div class="section" id="goblin-s-caterpillar-method">
 <h2>Goblin’s Caterpillar Method<a class="headerlink" href="#goblin-s-caterpillar-method" title="Permalink to this headline">¶</a></h2>
 <p>Recently Goblin’s Henchman (Goblin) shared an <a class="reference external" href="https://goblinshenchman.wordpress.com/2020/08/15/caterpillar-method-for-character-stat-generation/">article on their blog</a> about using different sides of the same dice to generate stats for characters in D&amp;D.</p>
-<p>The general idea is that, instead of using 4d6-drop-lowest, you would roll the stats following the following:</p>
+<p>The general idea is that, instead of using 4d6-drop-lowest, you would roll the stats using the following rules:</p>
 <ul class="simple">
 <li><p><strong>Stat 1:</strong> Add up the front face</p></li>
 <li><p><strong>Stat 2:</strong> Add up the top face</p></li>
@@ -275,11 +275,11 @@
 <li><p><strong>Stat 5:</strong> Add up all exposed faces on the right-most cube</p></li>
 <li><p><strong>Stat 6:</strong> Add up all exposed faces on the centre cube. If the front face is a 4, 5 or 6, then also add the bottom face.</p></li>
 </ul>
-<p>This purports to reduce the possibility the some characters will be much more powerful than others. However, as I shown later in the report, it doesn’t actually do a good job at achieving this. You are equally like to roll a very powerful character, or a very weak character, using this method as you are with 4d6-drop-lowest.</p>
+<p>This purports to reduce the possibility that some characters will be much more powerful than others. However, as I show later in this article, it doesn’t actually do a good job at achieving this. You are equally like to roll a very powerful character, or a very weak character, using this method as you are with 4d6-drop-lowest.</p>
 </div>
-<div class="section" id="improved-goblin-method">
-<h2>Improved Goblin Method<a class="headerlink" href="#improved-goblin-method" title="Permalink to this headline">¶</a></h2>
-<p>However, Goblin’s idea of using the opposite side of dice seems clever, and the method can be easily tweaked to correctly achieve a less variable character generation. I call this the <strong>Improved Goblin</strong> method:</p>
+<div class="section" id="improved-caterpillar-method">
+<h2>Improved Caterpillar Method<a class="headerlink" href="#improved-caterpillar-method" title="Permalink to this headline">¶</a></h2>
+<p>However, Goblin’s idea of using the opposite side of dice seems clever, and the method can be easily tweaked to correctly achieve a less variable character generation method. I call this the <strong>Improved Caterpillar</strong> method:</p>
 <ul class="simple">
 <li><p><strong>Stat 1:</strong> Add up the front face</p></li>
 <li><p><strong>Stat 2:</strong> Add up the <em>bottom</em> face - this is the only change to Goblin’s method.</p></li>
@@ -291,8 +291,14 @@
 </div>
 <div class="section" id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
-<p>Stat generation is an important part of building characters in D&amp;D. 4d6-drop-lowest and the Goblin Method don’t do a good job at avoiding very strong or very weak characters. Instead, the Improved Goblin is a better stat generation method to use.</p>
+<p>Stat generation is an important part of building characters in D&amp;D. 4d6-drop-lowest and the Goblin Method don’t do a good job at avoiding very strong or very weak characters. Instead, the Improved Caterpillar is a better stat generation method to use.</p>
 <p>The next section will first consider how these three methods compare based on the average stat generated.</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>This stat may receive additional bonuses or penalties based on other character building choices, but these do not interact with the initial stat array generation so I am ignoring them.</p>
+</dd>
+</dl>
 </div>
 </div>
 

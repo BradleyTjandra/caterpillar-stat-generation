@@ -2,15 +2,15 @@
 # coding: utf-8
 
 # # Individual Stats
-# This section compares the distribution of individual stats between 4d6-drop-lowest, Goblin's caterpillar method, and the Improved Goblin method. I find that using each method, the distribution of possible individual stats is the same under each method. This both corroborates what Goblin found, and verifies that the Improved Goblin method continues to be consistent with 4d6-drop-lowest.
+# This section compares the distribution of individual stats between 4d6-drop-lowest, Goblin's caterpillar method, and the Improved Caterpillar method. I find that using each method, the distribution of possible individual stats is the same under each method. This both corroborates what Goblin found, and verifies that the Improved Caterpillar method continues to be consistent with 4d6-drop-lowest (looking at individual stats).
 # 
 # ## Simulations
-# To perform this, I ran a simulation of 10,000 characters, each with 6 stats each, producing 60,000 stats. The distribution of these results is visible below.
+# To perform this, I ran a simulation of 100,000 characters, each with 6 stats each, producing 600,000 stats. The distribution of these results is visible below.
 # 
 # ```{glue:} stats_distribution_fig
 # ```
 # 
-# The two caterpillar methods (blue and yellow lines) have a very similar shape. Meanwhile, 4d6-drop-lowest (green) has a smoother curve than the caterpillar methods, and is appears to have a slightly higher range of scores. However, overall the three distributions appear fairly similar.
+# The two caterpillar methods (yellow and green lines, the yellow line is underneath the green line) have a very similar shape. Meanwhile, 4d6-drop-lowest (blue) has a smoother curve than the caterpillar methods, and has a slightly larger range of scores. However, overall the three distributions appear fairly similar.
 # 
 # ## Summary Statistics
 # This similarity can also be seen by looking at some summary statistics of the three methods.

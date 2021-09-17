@@ -12,7 +12,7 @@ import PandasHelper
 from IPython.display import display
 
 # Generate stats
-num_iterations = 100_000
+num_iterations = 1_000
 reload(StatArrays)
 stats_to_generate_4d6 = {
   "caterpillar" : StatArrays.caterpillar_stat_array,
@@ -26,9 +26,9 @@ stats_to_generate_3d6 = {
   "3d6" : StatArrays.three_d_six,
 }
 stats_for_analysis = {
-  "caterpillar" : StatArrays.caterpillar_stat_array,
-  "improved caterpillar" : StatArrays.caterpillar_stat_array2,
-  "4d6 drop lowest" : StatArrays.four_d_six_drop_lowest,
+  # "caterpillar" : StatArrays.caterpillar_stat_array,
+  # "improved caterpillar" : StatArrays.caterpillar_stat_array2,
+  # "4d6 drop lowest" : StatArrays.four_d_six_drop_lowest,
   "caterpillar (3d6)" : StatArrays.caterpillar_3d6,
   "improved caterpillar (3d6)" : StatArrays.caterpillar_v2_3d6,
   "3d6" : StatArrays.three_d_six,
@@ -178,3 +178,9 @@ for c in totals.columns:
 
 
 line_plot = lambda ax, df, c: ax.plot(df.index, df[c], label=c)
+
+
+maxes_idx = point_buy[point_buy.caterpillar==point_buy.caterpillar.max()].index
+stats_pd.loc[maxes_idx].reset_index().pivot(index="iter", columns="stat").drop_duplicates()
+
+StatArrays.point_buy_dict

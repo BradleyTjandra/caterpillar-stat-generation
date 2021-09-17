@@ -14,13 +14,13 @@ extent = [x_start, x_end, y_start, y_end]
 def graph_corr_data(ax, data: pd.core.frame.DataFrame, col: str) -> pd.core.frame.DataFrame:
 
   # Get correlation data
-  transposed = data.pivot("iter", "stat", col)
+  transposed = data.reset_index().pivot("iter", "stat", col)
   corr = np.corrcoef(transposed.values.T)  
   corr_masked = corr + np.triu(np.full_like(corr, fill_value=np.nan))
   corr_masked = corr_masked[1:, :-1]
 
   # Graph data  
-  ax.imshow(corr_masked, extent=extent, interpolation='None', cmap='Greens_r', vmax = .1, vmin=-.3)
+  ax.imshow(corr_masked, extent=extent, interpolation='None', cmap='viridis_r', vmax = 1., vmin=-1.)
 
   # Add the text
   size = corr_masked.shape[0]
@@ -57,9 +57,11 @@ def setup_fig(data):
 
 def analyse(data: pd.core.frame.DataFrame) -> list:
 
-  shuffled_data = data.groupby("iter").sample(frac=1)
-  shuffled_data.index = data.index
-  shuffled_data.reset_index(inplace=True)
+  # shuffled_data = data.groupby("iter").sample(frac=1)
+  # shuffled_data.index = data.index
+  # shuffled_data.reset_index(inplace=True)
+
+  shuffled_data = data
 
   fig, axes, flat_axes = setup_fig(data)
 

@@ -188,7 +188,7 @@ scenarios = pd.concat(
   keys=["Scenario "+str(i) for i in range(1,5)]).T
 scenarios = scenarios[["4d6-drop-lowest", "Caterpillar", "Improved Caterpillar"]]
 scenarios = scenarios.applymap(lambda x: "{:.1%}".format(x))
-glue("scenarios_df", scenarios, display=False)
+glue("scenarios_df", scenarios)
 
 
 # In[11]:

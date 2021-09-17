@@ -3,13 +3,13 @@
 
 # # Stat Arrays
 # 
-# The caterpillar methods are supposed to reduce the chance of players have very high or very low stats. Players having very high or low stats can be undesireable as it makes some characters much more powerful than others, and can make it for hard for a DM to balance encounters. This section shows that Goblin's caterpillar method does _not_ achieve this goal. However, the Improved Goblin method does.
+# The caterpillar methods are supposed to reduce the chance of players have very high or very low stats. Players having very high or low stats can be undesireable as it makes some characters much more powerful than others, and can make it for hard for a DM to balance encounters. This section shows that Goblin's caterpillar method does _not_ achieve this goal. However, the Improved Caterpillar method does.
 # 
 # ## What is too much volatility?
 # 
 # People have different standards about what is an "acceptable" amount of volatility between characters. Some parties are happy to have one player with many scores of 15 or higher, and another player with only one score above 15 and everything other stat below 12. For others, this difference would seem too large and would make the game less fun.
 # 
-# There's no right answer here. In my opinion, the volatility of 4d6-drop-lowest is a bit too large, and I would prefer something closer to the Improved Goblin method. However, it is possible to reduce the volatility of character stat arrays even further, for example 13th Age's [Base 13 Random method](https://www.13thagesrd.com/character-rules/#Base_13_Random_Stat_Generation_DATP).
+# There's no right answer here. In my opinion, the volatility of 4d6-drop-lowest is a bit too large, and I would prefer something closer to the Improved Caterpillar method. However, it is possible to reduce the volatility of character stat arrays even further, for example 13th Age's [Base 13 Random method](https://www.13thagesrd.com/character-rules/#Base_13_Random_Stat_Generation_DATP). Some may consider this an even stronger improvement above Improved Caterpillar, while others may say it reduces the volatility too much.
 # 
 # ## How Can We Compare Stat Arrays?
 # 
@@ -17,7 +17,7 @@
 # 
 # However, I consider having an ability score of 18 rather than 16 to be much better than having an ability score of 12 rather than 10. The former will probably increase your primary ability score and thus be used much more, while the latter many only have a small impact as it is probably not your character's primary focus.
 # 
-# This is also reflected in the point buy method, which has a supralinear relationship for scores of 14+. Given this seems like a popular method of stat array generation, I have decided to adopt the costs for each ability score from the stat array. Because the point buy table only covers scores between 8 and 15, I have extended the table per the following schedule.
+# This is also reflected in the point buy method, which has a supralinear relationship for scores of 14+. For those interested this is outlined more [here](https://www.skullsplitterdice.com/blogs/dnd/point-buy-5e). Given this seems like a popular method of stat array generation, I have decided to adopt the costs for each ability score from this method. Because the point buy table only covers scores between 8 and 15, I have extended the table per the following schedule.
 # ```{glue:} point_buy_fig
 # ```
 #  
@@ -31,7 +31,7 @@
 # 
 # ## Summary Statistics
 # 
-# We can again look at the summary statistics of the three stat generation methods, as shown in the table below. I note that this has only been done over 1 million scenarios, and so 
+# We can again look at the summary statistics of the three stat generation methods, as shown in the table below. 
 # ```{glue:} summary_point_buy_df
 # ```
 # 
@@ -61,12 +61,14 @@
 # * A correlation of "-1" means the opposite: whenever the first stat is low the second stat is high, and whenever the second stat is low the first stat is high. 
 # * A correlation of "0" means there is no relationship between the two stats.
 # 
+# Given we want high stats to be offset by low stats, in general we want correlations to be negative (coloured as lighter colours in the figure below).
+# 
 # ```{glue:} corr_fig
 # ```
 # 
 # The correlation between stats in 4d6-drop-lowest is effectively 0. This makes sense, as there is no link between each of the six stats - they are all generated from separate die rolls.
 # 
-# The Caterpillar method does have a slight negative correlation between stats. This means that when one stat is high, others will tend to be lower. However, from previous analysis we know that this negative correlation is fairly insignificant.
+# The Caterpillar method has one correlations of -1 (recall that Stat 1 and Stat 3 are opposite sides of the same dice, so they will always total to 21). However, other stats have positive correlations: specifically the correlation between Stat 2 and Stats 4, 5 and 6. This is because each of these stats add the top faces of the dice to calculate their value, meaning when one of those stats is high, others will also tend to be high.
 # 
 # The Improved Caterpillar method has a much higher amount of negative correlation. This is consistent with what we've seen before: Improved Caterpillar means that characters will tend to not have very high or low stats across the board.
 # 
@@ -74,4 +76,4 @@
 # 
 # 4d6-drop-lowest and Caterpillar produce a similar amount of variations between characters. This makes it less ideal as a stat generation technique. The Improved Caterpillar method achieves much less variation.
 # 
-# The next session considers even more alternatives for stat generation, and discusses the merits of those compared to the Improved Caterpillar.
+# The next session considers even more alternatives for stat generation, and discusses their merits compared to the Improved Caterpillar.

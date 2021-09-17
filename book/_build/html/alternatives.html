@@ -257,7 +257,7 @@
                 
   <div class="section" id="alternative-methods">
 <h1>Alternative Methods<a class="headerlink" href="#alternative-methods" title="Permalink to this headline">¶</a></h1>
-<p>The Improved Goblin method allows us to generate random stats, while reducing the chances that characters are be incredibly powerful or weak. However, there are even more potential ways we could generate stats. This seciton considers these, and sees how effectively they a) allow for variability in stats and b) reduce variability in overall character strength.</p>
+<p>The Improved Caterpillar method allows us to generate random stats, while reducing the chances that characters will be incredibly powerful or weak. However, there are even more potential methods we could use to generate stats. This section considers a couple of alternative methods, and sees how effectively they a) allow for variability in stats and b) reduce variability in overall character strength.</p>
 <div class="section" id="desiderata-with-alternative-stat-methods">
 <h2>Desiderata with Alternative Stat Methods<a class="headerlink" href="#desiderata-with-alternative-stat-methods" title="Permalink to this headline">¶</a></h2>
 <p>Here are some desiderata we have for ways to generate stats:</p>
@@ -265,18 +265,18 @@
 <li><p>It allows players to have different stats.</p></li>
 <li><p>It makes stats somewhat random, so that players do not feel compelled to min-max to avoid being weaker than other players.</p></li>
 <li><p>It reduces the chances that players will have much better or worse stats than other players.</p></li>
-<li><p>It still allow players to have incredibly bad or incredibly good stats - but then the other stats will be good or bad to partially offset this.</p></li>
+<li><p>It still allow players to have incredibly bad or incredibly good stats - but then the other stats will be good or bad (respectively) to partially offset this.</p></li>
 </ol>
-<p>I acknowledge these desiderata are somewhat subjective, but for <em>me</em> they make a good game.</p>
+<p>I acknowledge these desiderata are somewhat subjective, but for <em>me</em> they make for a good method..</p>
 </div>
 <div class="section" id="possible-alternative-methods">
 <h2>Possible alternative methods<a class="headerlink" href="#possible-alternative-methods" title="Permalink to this headline">¶</a></h2>
-<p>A couple of methods have been raised as part of this discussion:</p>
+<p>A couple of methods have been suggested:</p>
 <ol class="simple">
 <li><p>Using the 13th Age’s method</p></li>
 <li><p>Instead of using the bottom faces, rolling a new set of 3d6</p></li>
 </ol>
-<p>For each of these, I will show the resulting distribution of stats, the distribution of character point budgets, and provide some commentary. I will compare these to 4d6-drop-lowest and Improved Goblin.</p>
+<p>For each of these, I will show the resulting distribution of stats, the distribution of character point budgets, and provide some commentary. I will compare these to 4d6-drop-lowest and Improved Caterpillar.</p>
 </div>
 <div class="section" id="th-age-method">
 <h2>13th Age method<a class="headerlink" href="#th-age-method" title="Permalink to this headline">¶</a></h2>
@@ -284,18 +284,18 @@
 <div class="cell_output docutils container">
 <img alt="_images/code_12_0.png" src="_images/code_12_0.png" />
 </div>
-<p>Looking at the individual stats (the left-hand chart), the 13th Age method shape is a lot simpler - as each stat is generated from only a couple of dice. It has a similar shape to 4d6-drop-lowest, with a peak and mean of around 12. Despite having a minimum stat roll of 5 (as opposed to the other methods with a minimum of 3), the spread is relatively similar.</p>
-<p>Considering the overall point buy budget (the right-hand chart), the 13th Age method has a significantly lower spread. This is to be expected as the method forces the sum of all stats to be 72. Any differences in characters is purely because some characters will have stats above 15, which are considered more valuable.</p>
-<p>This method provides a much narrower range of characters, and is a very simple way of generating characters. While some may consider this lack of diversity a negative, it seems like a viable alternative to keep characters adequately similar. Some may also not like the symmetry, and prefer a negative skew where most of the stats are high, with a small possibility for very low (&lt;5) stats. As opposed to the 13th Age method where there is slightly less chance for high numbers, offset by no chance of very low stats.</p>
+<p>Looking at the individual stats (the left-hand chart), the 13th Age method’s distribution is a lot simpler (it is the hybrid of two linear functions) as each stat is generated from only a couple of dice. It has a similar shape to 4d6-drop-lowest, with a peak and mean of around 12. Despite having a minimum stat roll of 5 (as opposed to the other methods with a minimum of 3), the spread is relatively similar.</p>
+<p>Considering the overall point buy budget (the right-hand chart), the 13th Age method has a significantly lower spread. This is to be expected as the method forces the sum of all stats to be 72. Any differences in characters is purely because some characters will have stats above 13, which are considered more valuable.</p>
+<p>This method provides a much narrower range of characters, and is a very simple way of generating characters. While some may consider this lack of diversity a negative, it seems like a viable alternative to keep characters adequately similar. Some may also not like the symmetry, and prefer a negative skew where most of the stats are high with a small possibility for very low (&lt;5) stats, which is a feature of 3d6-drop-lowest and Improved Caterpillar. In contrast, the 13th Age method has slightly less chance for high numbers, offset by no chance of very low stats.</p>
 </div>
 <div class="section" id="rolling-a-new-set-of-3d6">
 <h2>Rolling a new set of 3d6<a class="headerlink" href="#rolling-a-new-set-of-3d6" title="Permalink to this headline">¶</a></h2>
-<p>Under this method, you do the Improved Caterpillar method as usual. However instead of adding the bottom faces, you simply re-roll the 3d6. This has the advantage of not requiring you to reference faces which are not visible. The distribution of this method can be seen below.</p>
+<p>Under this method, you perform the Improved Caterpillar method as usual. However instead of adding the bottom faces, you simply re-roll the 3d6. This has the advantage of not requiring you to reference faces which are not visible. The distribution of this method can be seen below.</p>
 <div class="cell_output docutils container">
 <img alt="_images/code_13_0.png" src="_images/code_13_0.png" />
 </div>
 <p>For individual stats, the distributions are very similar: The means are all around 12, the standard deviations all around 3.0, and the interquartile ranges (not shown) are the same.</p>
-<p>However, for distribution of overall character strength (the right-hand chart) the “Roll again” method is somewhat in-between the two methods (although slightly closer to 3d6-drop-lowest). This intuitively makes sense: While using the bottom face of the caterpillar makes one stat anti-correlated to the fourth, fifth and sixth stat, re-rolling the dice makes this stat independent of all other stats. And independent stats is the situation for 4d6-drop-lowest.</p>
+<p>However, the distribution of overall character strength (the right-hand chart) under the “Roll again” method is somewhat in-between the two methods (although slightly closer to 3d6-drop-lowest). This intuitively makes sense: While using the bottom face of the caterpillar makes one stat anti-correlated to the fourth, fifth and sixth stat, re-rolling the dice makes this stat independent of all other stats. And independent stats is the situation for 4d6-drop-lowest.</p>
 <p>This method doesn’t really constrain character strength that much. It does mean that “hidden” faces are not used in the calculation (which some may see as a pro) and that the dice need to be re-rolled (which some may see as a con), but these seem like relatively unimportant considerations.</p>
 </div>
 <div class="section" id="summary">
