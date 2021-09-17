@@ -5,10 +5,10 @@ In D&D, character creation involves creating six numbers ("stats") which represe
 
 This book shows that this method can be improved.
 
-* **Context** provides some context for those unfamiliar with D&D, and introduces the three stat generation methods.
-* **Individual Stats** shows how these three methods compare when looking at individual stats.
-* **Stat Arrays** shows how similar multiple characters will be when generated under each method.
-* **Alternative Methods** considers some other methods of generating stats.
+* [**Context**](../context) provides some context for those unfamiliar with D&D, and introduces the three stat generation methods.
+* [**Individual Stats**](../individual-stats) shows how these three methods compare when looking at individual stats.
+* [**Stat Arrays**](../arrays) shows how similar multiple characters will be when generated under each method.
+* [**Alternative Methods**](../alternatives) considers some other methods of generating stats.
 
 All of the code is available in the [Code](../code) chapter.
 

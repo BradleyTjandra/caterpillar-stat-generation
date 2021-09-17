@@ -364,8 +364,8 @@
     <tr>
       <th>std</th>
       <td>2.85</td>
-      <td>3.09</td>
-      <td>3.09</td>
+      <td>3.08</td>
+      <td>3.08</td>
     </tr>
     <tr>
       <th>min</th>
@@ -497,12 +497,12 @@
     <tr>
       <th>std</th>
       <td>10.2</td>
-      <td>9.83</td>
-      <td>5.92</td>
+      <td>9.79</td>
+      <td>5.95</td>
     </tr>
     <tr>
       <th>min</th>
-      <td>-3.0</td>
+      <td>-8.0</td>
       <td>4.0</td>
       <td>17.0</td>
     </tr>
@@ -526,7 +526,7 @@
     </tr>
     <tr>
       <th>max</th>
-      <td>80.0</td>
+      <td>90.0</td>
       <td>66.0</td>
       <td>50.0</td>
     </tr>
@@ -559,12 +559,62 @@
   <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Scenario &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">)])</span><span class="o">.</span><span class="n">T</span>
 <span class="n">scenarios</span> <span class="o">=</span> <span class="n">scenarios</span><span class="p">[[</span><span class="s2">&quot;4d6-drop-lowest&quot;</span><span class="p">,</span> <span class="s2">&quot;Caterpillar&quot;</span><span class="p">,</span> <span class="s2">&quot;Improved Caterpillar&quot;</span><span class="p">]]</span>
 <span class="n">scenarios</span> <span class="o">=</span> <span class="n">scenarios</span><span class="o">.</span><span class="n">applymap</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">{:.1%}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;scenarios_df&quot;</span><span class="p">,</span> <span class="n">scenarios</span><span class="p">,</span> <span class="n">display</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;scenarios_df&quot;</span><span class="p">,</span> <span class="n">scenarios</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>4d6-drop-lowest</th>
+      <th>Caterpillar</th>
+      <th>Improved Caterpillar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Scenario 1</th>
+      <td>14.9%</td>
+      <td>14.2%</td>
+      <td>5.8%</td>
+    </tr>
+    <tr>
+      <th>Scenario 2</th>
+      <td>31.2%</td>
+      <td>25.5%</td>
+      <td>15.8%</td>
+    </tr>
+    <tr>
+      <th>Scenario 3</th>
+      <td>6.7%</td>
+      <td>7.7%</td>
+      <td>0.8%</td>
+    </tr>
+    <tr>
+      <th>Scenario 4</th>
+      <td>13.5%</td>
+      <td>17.5%</td>
+      <td>9.8%</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -652,15 +702,15 @@
     </tr>
     <tr>
       <th>mean</th>
-      <td>12.243158</td>
-      <td>11.957040</td>
+      <td>12.243157</td>
+      <td>11.959403</td>
       <td>12.000000</td>
     </tr>
     <tr>
       <th>std</th>
-      <td>2.849791</td>
-      <td>3.086706</td>
-      <td>2.829622</td>
+      <td>2.847120</td>
+      <td>3.084965</td>
+      <td>2.829493</td>
     </tr>
     <tr>
       <th>min</th>
@@ -766,49 +816,49 @@
       <th>count</th>
       <td>600000.000000</td>
       <td>600000.000000</td>
-      <td>600000.00000</td>
+      <td>600000.000000</td>
     </tr>
     <tr>
       <th>mean</th>
-      <td>12.243158</td>
-      <td>11.957040</td>
-      <td>11.95428</td>
+      <td>12.243157</td>
+      <td>11.959403</td>
+      <td>11.958087</td>
     </tr>
     <tr>
       <th>std</th>
-      <td>2.849791</td>
-      <td>3.086706</td>
-      <td>3.08866</td>
+      <td>2.847120</td>
+      <td>3.084965</td>
+      <td>3.088424</td>
     </tr>
     <tr>
       <th>min</th>
       <td>3.000000</td>
       <td>3.000000</td>
-      <td>3.00000</td>
+      <td>3.000000</td>
     </tr>
     <tr>
       <th>25%</th>
       <td>10.000000</td>
       <td>10.000000</td>
-      <td>10.00000</td>
+      <td>10.000000</td>
     </tr>
     <tr>
       <th>50%</th>
       <td>12.000000</td>
       <td>12.000000</td>
-      <td>12.00000</td>
+      <td>12.000000</td>
     </tr>
     <tr>
       <th>75%</th>
       <td>14.000000</td>
       <td>14.000000</td>
-      <td>14.00000</td>
+      <td>14.000000</td>
     </tr>
     <tr>
       <th>max</th>
       <td>18.000000</td>
       <td>18.000000</td>
-      <td>18.00000</td>
+      <td>18.000000</td>
     </tr>
   </tbody>
 </table>

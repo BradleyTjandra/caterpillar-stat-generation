@@ -33,7 +33,7 @@ function onRerollClick() {
 function improvedGoblinRoll() {
 
   methodHeaderElem.innerHTML = 'Improved Caterpillar method'
-  captionElem.innerHTML = 'Based on the <a href="https://bradleytjandra.github.io/caterpillar-stat-generation/">Improved Caterpillar method.';
+  captionElem.innerHTML = 'Based on the <a href="https://bradleytjandra.github.io/caterpillar-stat-generation/">Improved Caterpillar method.</a>';
 
   let dice = [1, 2, 3].map(getRandomDie);
   statElems[0].innerHTML = dice[0].front + dice[1].front + dice[2].front;
@@ -66,7 +66,7 @@ function origGoblinRoll() {
   captionElem.innerHTML = `
     <div>
       Based on 
-        <a href="https://bradleytjandra.github.io/caterpillar-stat-generation/context.html#goblin-s-caterpillar-method/">Goblin\'s Caterpillar method</a>.
+        <a href="https://bradleytjandra.github.io/caterpillar-stat-generation/context.html#goblin-s-caterpillar-method/">Goblin\'s Henchmen\'s Caterpillar method</a>.
       This method is not recommended (see the article for reasons why).
     </div>
     `;
