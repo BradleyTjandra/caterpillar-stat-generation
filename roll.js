@@ -67,7 +67,9 @@ function origGoblinRoll() {
     <div>
       Based on 
         <a href="https://bradleytjandra.github.io/caterpillar-stat-generation/context.html#goblin-s-caterpillar-method/">Goblin\'s Henchmen\'s Caterpillar method</a>.
-      This method is not recommended (see the article for reasons why).
+      This method is not recommended (see 
+        <a href="https://bradleytjandra.github.io/caterpillar-stat-generation/intro.html">this article</a>
+      for reasons why).
     </div>
     `;
 
