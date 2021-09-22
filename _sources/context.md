@@ -3,7 +3,7 @@ Context
 
 In D&D, character creation involves creating six numbers ("stats") which represent how good you are at six different areas. These six different stats become your "stat array".
 
-There are numerous ways to create stat arrays. While some ways are deterministic (i.e. you get to choose what number each stat is, subject to some constraints), a common method to add some randomisation to this process is called "4d6-drop-lowest". Under this method, you roll four dice and sum up the numbers on the three highest dice. The resulting sum becomes the one of your stats [^1]. This is repeated for the other five stats.
+There are numerous ways to create stat arrays. While some ways are deterministic (i.e. you get to choose what number each stat is, subject to some constraints), a common method to add some randomisation to this process is called "4d6-drop-lowest". Under this method, you roll four dice and sum up the numbers on the three highest dice. The resulting sum becomes one of your stats [^1]. This is repeated for the other five stats.
 
 [^1]: This stat may receive additional bonuses or penalties based on other character building choices, but these do not interact with the initial stat array generation so I am ignoring them.
 ## Issues with 4d6-drop-lowest
